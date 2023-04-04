@@ -4,12 +4,46 @@
 }
 
 .front_header{
-  background-color: #FFFFF0;
-  width: 95%;
-  height: 80px;
-  padding: 0 2%;
+  background-color: #ddd7d9;
+  width: 98%;
+  height: 60px;
+  padding: 0 1%;
 }
 
+.front_header .mob_list{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.mob_list button{
+  background-color: transparent;
+  border: 0;
+  font-size: 20px;
+}
+
+.mob_list ul li a{
+  color: white;
+}
+
+.mob_list:hover ul{
+  display: flex;
+}
+
+.mob_list ul{
+  list-style-type: none;
+  background-color: #501b1d;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 25%;
+  right: 0%;
+  top: 35px;
+  align-items: center;
+  padding: 20px 0px;
+  height: 12%;
+  display: none;
+}
 
 nav{
   width: 100%;
@@ -19,19 +53,24 @@ nav{
   padding: 15px 0;
 }
 
+.normal_list{
+  display: none;
+}
+
 nav ul li{
   display: inline-block;
   list-style: none;
-  margin: 10px 30px;
+  margin: 10px 10px;
 }
 
 .front_header a{
   text-decoration: none;
+  color: black;
 }
 
 .front_main{
   width: 100%;
-  height: 800px;
+  height: 300px;
   background-image: url('calendar.png');
   background-repeat: no-repeat;
   background-size: cover;
@@ -39,44 +78,54 @@ nav ul li{
 
 .front_main h2{
   color: white;
-  padding: 15% 40% 0;
+  display: flex;
+  justify-content: center;
+  padding: 20% 35% 0%;
   font-size: 300%;
 }
 
 .front_main h4{
   color: white;
-  font-size: 220%;
-  padding: 0 31% 0;
+  display: flex;
+  justify-content: center;
+  font-size: 80%;
+  padding: 0% 20%;
 }
 
 .front_welcome{
+  display: flex;
   width: 100%;
-  height: 800px;
+  height: 400px;
   background-image: url('pic2.png');
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.front_welcome_text{
-  width: 50%;
-  min-width: 550px;
-  position: absolute;
+.front_welcome .front_welcome_text{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 48%;
+  min-width: 380px;
   min-height: 200px;
   transform: translate(-50%,-50%);
-  top: 140%;
-  left: 50%;
+  padding: 3% 8%;
+  margin: 34% 50% auto;
   background: white;
   border-radius: 10px;
+  position: relative;
 }
 
 .front_welcome_text h2{
-  font-size: 300%;
-  padding: 10% 20% 5% 32%;
+  font-size: 200%;
+  padding: 2% 25%;
 }
 
 .front_welcome_text h5{
-  font-size: 120%;
-  padding: 0 10% 0 10%;
+  font-size: 80%;
+  padding: 5% 3%;
+  text-align: justify;
 }
 
 .front_welcome_text a{
@@ -85,54 +134,34 @@ nav ul li{
   background-color: #501B1D;
   color: white;
   padding: 10px 30px;
-  font-size: 18px;
+  font-size: 14px;
   margin-top: 50px;
   border-radius: 5px;
-  margin: 5% 35% 5% 39%;
+  margin: 5% 35%;
 }
 
 .front_quote{
   width: 100%;
-  height: 600px;
+  height: 280px;
   background-color: #501B1D;
   color: white;
 }
 
-.front_quote h2{
-  font-size: 300%;
-  padding: 10% 20% 0  50%;
-}
-
-.front_quote h4{
-  font-size: 250%;
-  margin: 0 25% 0 30%;
-}
-
-.front_quote h5{
-  font-size: 170%;
-  margin: 0 25% 10% 42%;
-}
-
-
 .front_quote2{
   width: 100%;
-  height: 600px;
+  height: 280px;
   color: #501B1D;
   background-color: white;
 }
 
-.front_quote2 h2{
-  font-size: 300%;
-  padding: 10% 20% 0  50%;
+.front_quote h4, .front_quote2 h4{
+  font-size: 150%;
+  display: flex;
+  padding: 10% 25% 5%;
 }
 
-.front_quote2 h4{
-  font-size: 250%;
-  margin: 0 25% 0 30%;
-}
-
-.front_quote2 h5{
-  font-size: 170%;
+.front_quote h5,.front_quote2 h5{
+  font-size: 100%;
   margin: 0 25% 10% 42%;
 }
 
@@ -154,7 +183,7 @@ input{
   position: relative;
   border-radius: 5px;
   margin-bottom: 15px;
-  margin-left: 25%;
+  margin-left: 20%;
   background-color: #FFFFF0;
 }
 
@@ -164,11 +193,113 @@ input:focus{
 }
 
 .front_contact h2{
-  font-size: 200%;
-  padding: 3% 20% 3% 45%;
+  font-size: 150%;
+  padding: 3% 30%;
 }
 
 .front_contact h6{
-  margin: 0 25% 0 50%;
+  margin: 0 40%;
   font-size: 120%;
+}
+
+/* tablet */
+@media(min-width: 760px){
+
+  .front_main{
+    height: 800px;
+  }
+
+  .mob_list, .mob_list ul{
+    visibility: hidden;
+    display: none;
+  }
+
+  .normal_list{
+    display: flex;
+  }
+
+  .front_main h2{
+    padding: 25% 10% 0%;
+    font-size: 380%;
+  }
+  
+  .front_main h4{
+    font-size: 150%;
+  }
+
+  .front_welcome{
+    height: 800px;
+  }
+
+  .front_welcome .front_welcome_text{
+    width: 55%;
+    min-width: 450px;
+    min-height: 200px;
+    padding: 3% 9%;
+    margin: 40% 50% auto;
+  }
+  .front_welcome_text a{
+    padding: 20px 20px;
+    font-size: 14px;
+    margin-top: 50px;
+    border-radius: 5px;
+    margin: 5% 35%;
+  }
+  
+  .front_welcome_text h2{
+    font-size: 250%;
+    padding: 2% 35%;
+  }
+  
+  .front_welcome_text h5{
+    font-size: 110%;
+  }
+
+  
+  .front_welcome_text a{
+    padding: 8px 60px;
+    font-size: 20px;
+    margin-top: 50px;
+    border-radius: 5px;
+    margin: 5% 40%;
+  }
+
+  nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 30px;
+  }
+  
+  .front_header a{
+    text-decoration: none;
+    color: black;
+  }
+
+}
+
+
+@media(min-width: 980px){
+  .front_main h2{
+    padding: 20% 5% 0%;
+    font-size: 450%;
+  }
+  
+  .front_main h4{
+    font-size: 180%;
+  }
+
+  .front_welcome .front_welcome_text{
+    margin: 20% 50% auto;
+  }
+
+  .front_quote h4, .front_quote2 h4{
+    font-size: 180%;
+    display: flex;
+    padding: 5% 25% 5%;
+  }
+
+  .front_quote h5,.front_quote2 h5{
+    margin: 0 5% 10% 42%;
+    font-size: 130%;
+  }
 }
