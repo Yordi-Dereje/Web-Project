@@ -1,0 +1,20 @@
+.container{
+    display:flex;
+    flex-direction: column;
+    width:300px;
+    box-shadow:3px 3px 10px rgba(0,0,0,0.15);
+    border-top:5px solid #009578;
+    border-bottom: 5px solid #009578;
+}
+.todo{
+    display:flex;
+    justify-content: space-between;
+    padding: 1em;
+}
+.todovalue{
+    background:transparent;
+    border:none;
+    outline:none;
+    font-family: 'Quicksand', sans-serif;
+    
+}
