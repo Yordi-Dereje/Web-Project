@@ -17,6 +17,14 @@ h1{
 placeholder{
     margin-left:20px;
 }
+label{
+    display:inline-block;
+    width:100px;
+}
+#form{
+    border-radius: 10px;
+    
+}
 .todo{
     display:flex;
     justify-content: space-between;
@@ -24,7 +32,7 @@ placeholder{
 }
 .todovalue{
     background:transparent;
-    border:none;
+    border:3px balck;
     outline:none;
     font-family: 'Quicksand', sans-serif;
     font-size:1em;
