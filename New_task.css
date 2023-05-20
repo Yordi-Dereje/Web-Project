@@ -1,10 +1,21 @@
 .container{
     display:flex;
     flex-direction: column;
-    width:300px;
+    width:70%;
+    justify-content: center;
+    margin:0 auto;
     box-shadow:3px 3px 10px rgba(0,0,0,0.15);
-    border-top:5px solid #009578;
-    border-bottom: 5px solid #009578;
+    border-top:5px solid rgb(39, 35, 35);
+    border-bottom: 5px solid rgb(39, 35, 35);
+}
+h1{
+    color:rgb(94, 24, 24);
+}
+.labels{
+    color:rgb(94,24,24);
+}
+placeholder{
+    margin-left:20px;
 }
 .todo{
     display:flex;
@@ -25,6 +36,7 @@
     background: #eeeeee;
     text-decoration: line-through;
     order:1;
-
-
+}
+.todovalue:hover{
+    font-size: 19px;
 }
