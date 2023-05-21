@@ -10,7 +10,7 @@ body{
 .container{
     display:flex;
     flex-direction: column;
-    width:100%;
+    width:55%;
     height:100vh;
     position:relative;
     overflow: hidden;
