@@ -5,7 +5,17 @@
 }
 body{
     min-height:100vh;
+    background-color: bisque;
 
+}
+input[type=checkbox]
+{
+    -ms-transform:scale(3);
+    -moz-transform:scale(3);
+    -webkit-transform:scale(3);
+    -o-transform:scale(3);
+    transform:scale(3);
+    padding:15px;
 }
 .container{
     display:flex;
@@ -22,6 +32,7 @@ body{
     background:linear-gradient(45deg, rgba(47, 47, 129, 0.4),rgb(192, 135, 135),rgb(119, 86, 86));
     background-size: 300% 300%;
     animation:color 12s ease-in-out infinite;
+    font-size:17px;
 }
 @keyframes color{
     0%{
