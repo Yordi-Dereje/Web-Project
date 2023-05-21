@@ -5,7 +5,7 @@
 }
 body{
     min-height:100vh;
-    background-color: bisque;
+    background-color: rgb(184, 90, 187);
 
 }
 input[type=checkbox]
@@ -20,7 +20,7 @@ input[type=checkbox]
 .container{
     display:flex;
     flex-direction: column;
-    width:55%;
+    width:60%;
     height:100vh;
     position:relative;
     overflow: hidden;
@@ -29,7 +29,10 @@ input[type=checkbox]
     box-shadow:3px 3px 10px rgba(0,0,0,0.15);
     border-top:5px solid rgb(39, 35, 35);
     border-bottom: 5px solid rgb(39, 35, 35);
-    background:linear-gradient(45deg, rgba(47, 47, 129, 0.4),rgb(192, 135, 135),rgb(119, 86, 86));
+    border-left:5px solid  rgb(39, 35, 35);
+    border-right: 5px solid  rgb(39, 35, 35);
+    border-radius: 20px;
+    background:linear-gradient(45deg, rgba(46, 59, 48, 0.4),rgb(195, 137, 223),rgb(194, 163, 116));
     background-size: 300% 300%;
     animation:color 12s ease-in-out infinite;
     font-size:17px;
