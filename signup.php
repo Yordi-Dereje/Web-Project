@@ -45,37 +45,36 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
   </header>
   <div class="wrapper">
     <div class="form-box">
-     <h2>Register</h2>
-     <form method="post">
-      <div class="input-box">
-      <input  type="text" required name="first_name" value="">
-      <label for="firstName">First Name</label>
-      </div>
-      <div class="input-box">
-        <input  type="text" required name="last_name" value="">
-        <label for="lastName">Last Name</label>
-        </div>
-        <div class="input-box">
-          <input  type="email" required name="email" value="">
-          <label for="email">Email</label>
+      <h2>Register</h2>
+        <form method="post">
+          <div class="input-box">
+            <input  type="text" required name="first_name" value="">
+            <label for="firstName">First Name</label>
+          </div>
+          <div class="input-box">
+            <input  type="text" required name="last_name" value="">
+            <label for="lastName">Last Name</label>
+          </div>
+          <div class="input-box">
+            <input  type="email" required name="email" value="">
+            <label for="email">Email</label>
           </div>
           <div class="input-box">
             <input placeholder="+251" type="tel" maxlength="13" name="phone" id="phone" pattern="[+][0-9]{12}"  value="">
             <label for="phoneNumber">Phone Number</label>
-            </div>
-            <div class="input-box">
-              <input  type="text" required name="user_name" value="">
-              <label for="userName">User Name</label>
-              </div>
-      <div class="input-box">
-      <input  type="password" required name="password" value="">
-      <label for="pwd">Password</label>
+          </div>
+          <div class="input-box">
+            <input  type="text" required name="user_name" value="">
+            <label for="userName">User Name</label>
+          </div>
+          <div class="input-box">
+            <input  type="password" required name="password" value="">
+            <label for="pwd">Password</label>
+          </div>
+          <button class="btn" type="submit" class="btn">Register</button>
+        </form>
+    </div>
   </div>
-  <button class="btn" type="submit" class="btn">Register</button>
-  </div>
-  
-      
-     </form>
 </body>
 </html>
 
