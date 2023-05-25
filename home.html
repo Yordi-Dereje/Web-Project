@@ -4,9 +4,18 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="darkmode.css">
+  <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
   <title>Document</title>
 </head>
-<body>
+
+  <body class="light">
+    <input type="checkbox" id="toggle">
+    <label class="toggle" for="toggle">
+        <i class="bx bxs-sun"></i>
+        <i class="bx bx-moon"></i>
+        <span class="ball"></span>
+    </label>
   <div class="home_whole">
     <div class="home_sidebar">
       <div class="profile">
@@ -29,3 +38,4 @@
   </div>
 </body>
 </html>
+<script src="darkmode.js"></script>
