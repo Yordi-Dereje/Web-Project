@@ -35,20 +35,39 @@ if(!empty($first_name) && !empty($last_name) && !empty($email) && !empty($phone)
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signup.css">
     <title>Manage account</title>
 </head>
-<body>
-    <div id="box">
-	<form method="post">
-    <div style="font-size: 20px;margin: 10px;">Manage your account</div>
-    First name: <input type="text" name="first_name" value="<?php echo $user_data['FirstName']; ?>"><br><br>
-    Last name: <input type="text" name="last_name" value="<?php echo $user_data['LastName']; ?>" ><br><br>
-    Email: <input type="text" name="email" value="<?php echo $user_data['Email']; ?>"><br><br>
-    Phone: <input type="text" name="phone" value="<?php echo $user_data['Phone']; ?>"><br><br>
-		User name: <input type="text" name="user_name" value="<?php echo $user_data['UserName']; ?>"><br><br>
-		Password: <input type="text" name="password" value="<?php echo $user_data['Password']; ?>"><br><br>
-		<input type="submit" value="Confirm"><br><br>
-		<a href="index.php">Back</a>
-    
+<body>  
+  <div class="form-box">
+    <form method="post">
+      <div class="input-box">
+        <input  type="text" required name="first_name" value="<?php echo $user_data['FirstName']; ?>">
+        <label for="firstName">First Name</label>
+      </div>
+      <div class="input-box">
+        <input  type="text" required name="last_name" value="<?php echo $user_data['LastName']; ?>">
+        <label for="lastName">Last Name</label>
+      </div>
+      <div class="input-box">
+        <input  type="email" required name="email" value="<?php echo $user_data['Email']; ?>">
+        <label for="email">Email</label>
+      </div>
+      <div class="input-box">
+        <input placeholder="+251" type="tel" maxlength="13" name="phone" id="phone" pattern="[+][0-9]{12}"  value="<?php echo $user_data['Phone']; ?>">
+        <label for="phoneNumber">Phone Number</label>
+      </div>
+      <div class="input-box">
+        <input  type="text" required name="user_name" value="<?php echo $user_data['UserName']; ?>">
+        <label for="userName">User Name</label>
+      </div>
+      <div class="input-box">
+        <input  type="password" required name="password" value="<?php echo $user_data['Password']; ?>">
+        <label for="pwd">Password</label>
+      </div>
+      <button class="btn" type="submit" class="btn">Update</button>
+    </form>
+  </div>
+
 </body>
 </html>
