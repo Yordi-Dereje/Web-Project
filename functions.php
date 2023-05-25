@@ -17,10 +17,9 @@ function check_login($con){
 }
 
 function task_list($con){
-	if(isset($_SESSION['TaskID']) && isset($_SESSION['UserID'])){
+	if(isset($_SESSION['TaskID'])){
 		$tid = $_SESSION['TaskID'];
-		$uid = $_SESSION['UserID'];
-		$query2 = "select * from Tasks where TaskID = '$tid' and UserID = '$uid' limit 1";
+		$query2 = "select * from Tasks where TaskID = '$tid' limit 1";
 		$result2 = mysqli_query($con,$query2);
 		if($result2 && mysqli_num_rows($result2) > 0){
 			$task_data = mysqli_fetch_assoc($result2);
