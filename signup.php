@@ -39,7 +39,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
       <h2>TASKMATE</h2>
       <ul>
         <li><a href="front.html">Home</a></li>
-        <li><a href="login.html">SignIn</a></li>
+        <li><a href="login.php">SignIn</a></li>
       </ul>
     </nav>
   </header>
