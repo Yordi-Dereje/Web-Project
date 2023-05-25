@@ -1,297 +1,193 @@
 *{
-  margin: 0%;
-  padding: 0%;
-}
-
-.front_header{
-  background-color: #ddd7d9;
-  width: 98%;
-  height: 60px;
-  padding: 0 1%;
-}
-
-.front_header .mob_list{
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.mob_list button{
-  background-color: transparent;
-  border: 0;
-  font-size: 20px;
-}
-
-.mob_list ul li a{
-  color: white;
-}
-
-.mob_list:hover ul{
-  display: flex;
-}
-
-.mob_list ul{
-  list-style-type: none;
-  background-color: #501b1d;
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  width: 25%;
-  right: 0%;
-  top: 35px;
-  align-items: center;
-  padding: 20px 0px;
-  height: 12%;
-  display: none;
-}
-
-nav{
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 15px 0;
-}
-
-.normal_list{
-  display: none;
-}
-
-nav ul li{
-  display: inline-block;
-  list-style: none;
-  margin: 10px 10px;
-}
-
-.front_header a{
-  text-decoration: none;
-  color: black;
-}
-
-.front_main{
-  width: 100%;
-  height: 300px;
-  background-image: url('calendar.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.front_main h2{
-  color: white;
-  display: flex;
-  justify-content: center;
-  padding: 20% 35% 0%;
-  font-size: 300%;
-}
-
-.front_main h4{
-  color: white;
-  display: flex;
-  justify-content: center;
-  font-size: 80%;
-  padding: 0% 20%;
-}
-
-.front_welcome{
-  display: flex;
-  width: 100%;
-  height: 400px;
-  background-image: url('pic2.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.front_welcome .front_welcome_text{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 48%;
-  min-width: 380px;
-  min-height: 200px;
-  transform: translate(-50%,-50%);
-  padding: 3% 8%;
-  margin: 34% 50% auto;
-  background: white;
-  border-radius: 10px;
-  position: relative;
-}
-
-.front_welcome_text h2{
-  font-size: 200%;
-  padding: 2% 25%;
-}
-
-.front_welcome_text h5{
-  font-size: 80%;
-  padding: 5% 3%;
-  text-align: justify;
-}
-
-.front_welcome_text a{
-  display: inline-block;
-  text-decoration: none;
-  background-color: #501B1D;
-  color: white;
-  padding: 10px 30px;
-  font-size: 14px;
-  margin-top: 50px;
-  border-radius: 5px;
-  margin: 5% 35%;
-}
-
-.front_quote{
-  width: 100%;
-  height: 280px;
-  background-color: #501B1D;
-  color: white;
-}
-
-.front_quote2{
-  width: 100%;
-  height: 280px;
-  color: #501B1D;
-  background-color: white;
-}
-
-.front_quote h4, .front_quote2 h4{
-  font-size: 150%;
-  display: flex;
-  padding: 10% 25% 5%;
-}
-
-.front_quote h5,.front_quote2 h5{
-  font-size: 100%;
-  margin: 0 25% 10% 42%;
-}
-
-.front_contact{
-  background-color: #FFFFF0;
-  color: #501B1D; 
-}
-
-
-input{
-  width: 55%;
-  height: 45px;
-  font-family: ‘Poppins’,sans-serif;
-  font-size: 15px;
-  border: 2px solid #d1d3d4;
-  padding: 17px;
-  color: #111111;
-  font-weight: 500;
-  position: relative;
-  border-radius: 5px;
-  margin-bottom: 15px;
-  margin-left: 20%;
-  background-color: #FFFFF0;
-}
-
-input:focus{
-  outline: none;
-  border-color: #501B1D;
-}
-
-.front_contact h2{
-  font-size: 150%;
-  padding: 3% 30%;
-}
-
-.front_contact h6{
-  margin: 0 40%;
-  font-size: 120%;
-}
-
-/* tablet */
-@media(min-width: 760px){
-
-  .front_main{
-    height: 800px;
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family:'Times New Roman', Times, serif;
+  }
+  body{
+min-height: 1000px;
+  }
+  html{
+    scroll-behavior: smooth;
+  }
+  header{
+position:fixed;
+top: 0;
+left: 0;
+width: 100%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 40px 100px;
+z-index: 1000;
+transition: 0.6s;
+  }
+  header.sticky{
+    padding: 5px 100px;
+    background:#fff;
+    border-bottom:1px solid (0,0,0,.1);
   }
 
-  .mob_list, .mob_list ul{
-    visibility: hidden;
-    display: none;
-  }
-
-  .normal_list{
-    display: flex;
-  }
-
-  .front_main h2{
-    padding: 25% 10% 0%;
-    font-size: 380%;
-  }
-  
-  .front_main h4{
-    font-size: 150%;
-  }
-
-  .front_welcome{
-    height: 800px;
-  }
-
-  .front_welcome .front_welcome_text{
-    width: 55%;
-    min-width: 450px;
-    min-height: 200px;
-    padding: 3% 9%;
-    margin: 40% 50% auto;
-  }
-  .front_welcome_text a{
-    padding: 20px 20px;
-    font-size: 14px;
-    margin-top: 50px;
-    border-radius: 5px;
-    margin: 5% 35%;
-  }
-  
-  .front_welcome_text h2{
-    font-size: 250%;
-    padding: 2% 35%;
-  }
-  
-  .front_welcome_text h5{
-    font-size: 110%;
-  }
-
-  
-  .front_welcome_text a{
-    padding: 8px 60px;
-    font-size: 20px;
-    margin-top: 50px;
-    border-radius: 5px;
-    margin: 5% 40%;
-  }
-
-  nav ul li{
-    display: inline-block;
-    list-style: none;
-    margin: 10px 30px;
-  }
-  
-  .front_header a{
+  #header.logo {
+    position: relative;
+    font-weight: 700;
+    color: #000;
     text-decoration: none;
-    color: black;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.6s;
   }
 
-}
+  header ul{
+    position:relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
+  header ul li{
+    position: relative;
+    list-style: none;
+  }
 
-@media(min-width: 980px){
-  .front_main h2{
-    padding: 20% 5% 0%;
-    font-size: 450%;
+  header ul li a{
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #000;
+    letter-spacing: 2px;
+    font-weight: 300;
+    transition: 0.6s;
+
+  }
+  header.sticky.logo,
+  header .sticky ul li a{
+    color: #000;
+  }
+
+  .banner{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: url(calendar.png);
+    background-size: cover;
+    display:flex ;
+    justify-content: center;
+    align-items: center;
+  }
+  .banner h4{
+    color:#000;
+    font-size: 50px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1em;
+
+  }
+  .sec{
+    background: url(pic2.png);
+    background-size: cover;
+    padding: 100px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .sec .content{
+    position: relative;
+    text-align: center;
+    width: 100%;
+  }
+  .text{
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  h2{
+    font-size: 40px;
+    font-weight: 200;
+    margin-bottom: 10px;
+  }
+  p{
+    position: relative;
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom:20px ;
+    letter-spacing: 1px;
+
+  }
+  .btn{
+    position: relative;
+    display: inline-block;
+    padding: 10px 30px;
+    background: #fff;
+    text-decoration: none;
+    color: #000;
+  }
+  .front_quote{
+    width: 100%;
+    height: 280px;
+    background-color: #501B1D;
+    color: white;
   }
   
-  .front_main h4{
-    font-size: 180%;
+  .front_quote2{
+    width: 100%;
+    height: 280px;
+    color: #501B1D;
+    background-color: white;
   }
-
-  .front_welcome .front_welcome_text{
-    margin: 20% 50% auto;
+  
+  .front_quote h4, .front_quote2 h4{
+    font-size: 150%;
+    display: flex;
+    padding: 10% 25% 5%;
   }
-
+  
+  .front_quote h5,.front_quote2 h5{
+    font-size: 100%;
+    margin: 0 25% 10% 42%;
+  }
+  
+  .front_contact{
+    background-color: #FFFFF0;
+    color: #501B1D; 
+  }
+  
+  
+  input{
+    width: 55%;
+    height: 45px;
+    font-family: ‘Poppins’,sans-serif;
+    font-size: 15px;
+    border: 2px solid #d1d3d4;
+    padding: 17px;
+    color: #111111;
+    font-weight: 500;
+    position: relative;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    margin-left: 20%;
+    background-color: #FFFFF0;
+  }
+  
+  input:focus{
+    outline: none;
+    border-color: #501B1D;
+  }
+  
+  .front_contact h2{
+    font-size: 150%;
+    padding: 3% 30%;
+  }
+  
+  .front_contact h6{
+    margin: 0 40%;
+    font-size: 120%;
+  }
+  .toggle{
+    display:none;
+  }
+  @media(max-width: 900px){
   .front_quote h4, .front_quote2 h4{
     font-size: 180%;
     display: flex;
@@ -301,5 +197,68 @@ input:focus{
   .front_quote h5,.front_quote2 h5{
     margin: 0 5% 10% 42%;
     font-size: 130%;
-  }
+        }
+    .toggle{
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+    .toggle:before{
+        content: '';
+        position: absolute;
+        top: 4px;
+        width: 100%;
+        height: 2px;
+        background: #000;
+        z-index: 1;
+        box-shadow: 0 10px 0 #000;
+        transition: 0.5s;
+    }
+    .toggle:after{
+        content: '';
+        position: absolute; 
+        bottom: 4px;
+        width: 100%;
+        height: 2px;
+        background: #000;
+        z-index: 1;
+        transition: 0.5s;
+    }
+    header,
+    header.sticky{
+        padding:5px 50px;
+        background: #fff;
+    }
+    header ul{
+        position: absolute;
+        top: 59px;
+        left: 0;
+        width: 100%;
+        height:100vh;
+        text-align: center;
+        overflow: auto;
+        background: #fff;
+        visibility: hidden;
+        opacity: 0;
+    }
+  
+    header.active ul {
+        visibility: visible;
+        opacity: 1;
+        display: block;
+        padding-top:20px ;
+    }
+    header.active ul li a{
+        display: inline-block;
+        margin: 40px 0;
+        font-size: 20px;
+        
+        
+    }
+    header .logo,
+    header ul li a{
+        color:#000;
+    }
 }
