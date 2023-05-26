@@ -52,7 +52,7 @@ body{
 .home_sidebar ul li a:hover,
 .home_sidebar ul li a:active{
   color: black;
-  background: #DEF2F1;
+  background: #fff;
 }
 
 .home_sidebar ul li a:hover:before,

@@ -57,29 +57,36 @@ input {
 }
 
 .light .toggle .bx-moon {
-    color: #151d2a;
+    color: #272a31;
 }
 
 .light .toggle .ball {
-    background: #151d2a;
+    background: #272a31;
 }
 .dark {
-    background: #151d2a;
+    background: #272a31;
 }
-
 .dark .toggle {
-    background: #151d2a;
+    background: #272a31;
     box-shadow: 3px 3px 3px #0e131b,
                 -3px -3px 3px #1c2739;
 }
-
 .dark .toggle .bx-sun {
     color: #fafafa;
 }
 
 .dark .toggle .bxs-moon {
-    color: #151d2a;
+    color: #272a31;
 }
+.home_sidebar,
+.profile,
+.home_sidebar ul li a,
+.profile h4,
+.profile h2{
+  
+    background: #f2a44cff;
+
+    }
 
 .dark .toggle .ball {
     background: #fafafa;
