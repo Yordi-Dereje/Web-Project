@@ -39,7 +39,9 @@ if(!empty($first_name) && !empty($last_name) && !empty($email) && !empty($phone)
     <title>Manage account</title>
 </head>
 <body>  
+  <div class="wrapper">
   <div class="form-box">
+    <h2>Account details</h2>
     <form method="post">
       <div class="input-box">
         <input  type="text" required name="first_name" value="<?php echo $user_data['FirstName']; ?>">
@@ -62,11 +64,12 @@ if(!empty($first_name) && !empty($last_name) && !empty($email) && !empty($phone)
         <label for="userName">User Name</label>
       </div>
       <div class="input-box">
-        <input  type="password" required name="password" value="<?php echo $user_data['Password']; ?>">
+        <input  type="text" required name="password" value="<?php echo $user_data['Password']; ?>">
         <label for="pwd">Password</label>
       </div>
       <button class="btn" type="submit" class="btn">Update</button>
     </form>
+  </div>
   </div>
 
 </body>

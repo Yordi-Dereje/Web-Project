@@ -39,6 +39,8 @@
   }
   body{
     background: url(images/signPic.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -74,7 +76,7 @@
     padding:50px;
   }
   .form-box h2{
-    font-size: 2em;
+    font-size: 1.8em;
     color: #501B1D;
     text-align: center;
 
