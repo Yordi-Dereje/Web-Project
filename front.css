@@ -70,7 +70,7 @@ transition: 0.6s;
     position: relative;
     width: 100%;
     min-height: 100vh;
-    background: url(calendar.png);
+    background: url(images/calendar.png);
     background-size: cover;
     display:flex ;
     justify-content: center;
@@ -85,7 +85,7 @@ transition: 0.6s;
 
   }
   .sec{
-    background: url(pic2.png);
+    background: url(images/pic2.png);
     background-size: cover;
     padding: 100px;
     min-height: 100vh;
@@ -152,29 +152,7 @@ transition: 0.6s;
     background-color: #FFFFF0;
     color: #501B1D; 
   }
-  
-  
-  input{
-    width: 55%;
-    height: 45px;
-    font-family: ‘Poppins’,sans-serif;
-    font-size: 15px;
-    border: 2px solid #d1d3d4;
-    padding: 17px;
-    color: #111111;
-    font-weight: 500;
-    position: relative;
-    border-radius: 5px;
-    margin-bottom: 15px;
-    margin-left: 20%;
-    background-color: #FFFFF0;
-  }
-  
-  input:focus{
-    outline: none;
-    border-color: #501B1D;
-  }
-  
+    
   .front_contact h2{
     font-size: 150%;
     padding: 3% 30%;
