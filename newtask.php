@@ -53,10 +53,20 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
           <label for="description">Description</label>
         </div>
     
-    Category: <br> <input type="radio" name="category" value="reading"> Reading <input type="radio" name="category" value="sports"> Sports <input type="radio" name="category" value="Nutrition"> Nutrition <br>
-      <input type="radio" name="category" value="entertainment"> Entertainment <input type="radio" name="category" value="home"> Home <input type="radio" name="category" value="finance"> Finance <br>
-      <input type="radio" name="category" value="social"> Social <input type="radio" name="category" value="outdoor"> Outdoor <input type="radio" name="category" value="health"> Health <br>
-<input type="radio" name="category" value="art"> Art <input type="radio" name="category" value="meditation"> Meditation <input type="radio" name="category" value="study"> Study <br><br>
+    Category: <select name="category" id="category" required>
+        <option value="reading">Reading</option>
+        <option value="sports">Sports</option>
+        <option value="nutrition">Nutrition</option>
+        <option value="entertainment">Entertainment</option>
+        <option value="home">Home</option>
+        <option value="finance">Finance</option>
+        <option value="social">Social</option>
+        <option value="outdoor">Outdoor</option>
+        <option value="health">Health</option>
+        <option value="art">Art</option>
+        <option value="meditation">Meditation</option>
+        <option value="study">Study</option>
+     </select><br><br>
     Date: <input type="date" name="date"><br><br>
     Priority: <br> <input type="radio" name="priority" value="1"> Low  <input type="radio" name="priority" value="2"> Mid <input type="radio" name="priority" value="3"> High <br><br>
 	  <button class="btn" type="submit" class="btn">Register</button> 

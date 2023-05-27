@@ -26,18 +26,18 @@
 
 .sidebar h2 {
     color: white;
-    margin-top: 30px;
+    margin-top: 50px;
 }
 
 .sidebar h4 {
     color: white;
-    margin-bottom: 60px;
+    margin-bottom: 100px;
 }
 
 .sidebar ul li a {
     background: #501B1D;
     display: block;
-    padding: 4vh 10%;
+    padding: 5vh 10%;
     font-size: 16px;
     position: relative;
     color: white;
@@ -106,4 +106,28 @@
 
 .disp:hover {
     scale: 1.01;
+}
+
+.showstatus {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 70vw;
+
+}
+
+.showstatus button {
+    font-size: 125%;
+    padding: 10px 15px;
+    border-radius: 15px;
+    background-color: #501B1D;
+    cursor: pointer;
+    color: white;
+    border: none;
+    outline: none;
+}
+
+.showstatus button:hover {
+    scale: 1.02;
 }
