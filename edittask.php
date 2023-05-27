@@ -24,7 +24,7 @@ if($_SERVER['REQUEST_METHOD'] == 'GET'){
 
 
 if($_SERVER['REQUEST_METHOD'] == "POST"){
-    $tid = $task_data['TaskID'];
+    $tid = $_GET["id"];
     $title = $_POST['title'];
     $description = $_POST['description']; 
     $category = $_POST['category'];
@@ -33,7 +33,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     $priority = (int)$_POST['priority'];
   
       if(!empty($title)){
-          $query = "update Tasks set Title='$title', Description='$description', Category='$category', Date='$date', Status='$status', Priority='$priority' where Tasks.TaskID='$tid'";
+          $query = "update Tasks set Title='$title', Description='$description', Category='$category', Date='$date', Status='$status', Priority='$priority' where TaskID='$tid'";
           mysqli_query($con, $query);
           header("Location: temphome.php");
           die;
@@ -99,9 +99,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
         <option value="3" <?php if ($task_data['Priority'] == 3) echo 'selected="selected"'?> >High</option>
       </select>
     <br><br>
-	 <button class="btn" type="submit">Update</button> 
-
- 
+	 <button class="btn" type="submit">Update</button>
   </form>
   </div>
   </div>

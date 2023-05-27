@@ -44,7 +44,7 @@ $user_data = check_login($con);
           if(mysqli_num_rows($run_query) > 0){
             foreach($run_query as $row){
               ?>
-              <div class="disp">
+              <div class="disp" onclick="location.href='edittask.php?id=<?= $row['TaskID']; ?>';">
                 <div class="leftdiv">
                   <div class="datediv"><?= $row['Date']; ?></div>
                   <div class="titlediv"><?= $row['Title']; ?></div>
@@ -53,7 +53,6 @@ $user_data = check_login($con);
                 <div class="rightdiv">
                   <div class="prioritydiv"><?= $row['Pdes']; ?> priority</div>
                   <div class="statusdiv"><?= $row['Sdes']; ?></div>
-                  <button><a href="edittask.php?id=<?= $row['TaskID']; ?>">Update</a></button>
                 </div>
               </div>
         <?php
