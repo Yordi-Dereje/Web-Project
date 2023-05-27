@@ -65,6 +65,7 @@ input {
 }
 .dark {
     background: #272a31;
+    color: white;
 }
 .dark .toggle {
     background: #272a31;
