@@ -12,14 +12,13 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
   $description = $_POST['description'];
   $category = $_POST['category'];
   $date = $_POST['date'];
-  $timeH = (int)$_POST['time_h'];
   $status = 1;
   $priority = (int)$_POST['priority'];
 
     if(!empty($title) && !empty($description)){
-        $query = "insert into Tasks (UserID, Title, Description, Category, Date, Time_H, Time_M, Status, Priority) values ('$id', '$title', '$description', '$category', '$date', '$timeH', '$timeM', '$status', '$priority')";
+        $query = "insert into Tasks (UserID, Title, Description, Category, Date, Status, Priority) values ('$id', '$title', '$description', '$category', '$date', '$status', '$priority')";
         mysqli_query($con, $query);
-        header("Location: home.html");
+        header("Location: temphome.php");
         die;
     }
 	else{
@@ -59,7 +58,6 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
       <input type="radio" name="category" value="social"> Social <input type="radio" name="category" value="outdoor"> Outdoor <input type="radio" name="category" value="health"> Health <br>
 <input type="radio" name="category" value="art"> Art <input type="radio" name="category" value="meditation"> Meditation <input type="radio" name="category" value="study"> Study <br><br>
     Date: <input type="date" name="date"><br><br>
-    Time: <input type="time" name="time_h"> <br><br>
     Priority: <br> <input type="radio" name="priority" value="1"> Low  <input type="radio" name="priority" value="2"> Mid <input type="radio" name="priority" value="3"> High <br><br>
 	  <button class="btn" type="submit" class="btn">Register</button> 
   </div>

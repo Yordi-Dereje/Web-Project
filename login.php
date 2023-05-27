@@ -16,7 +16,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 			$user_data = mysqli_fetch_assoc($result);
 			if($user_data['Password'] === $password){
 				$_SESSION['id'] = $user_data['id'];
-				header("Location: home.php");
+				header("Location: temphome.php");
 				die;
 			}
 			else{

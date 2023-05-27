@@ -1,69 +1,109 @@
-*{
-  color: black;
-  list-style: none;
-  text-decoration: none;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+* {
+    color: black;
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.sidebar{
-  background: #501B1D;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 20vw;
-  height: 100vh;
-  padding: 20px 0;
-  transition: all 0.5s ease;
+.sidebar {
+    background: #501B1D;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20vw;
+    height: 100vh;
+    padding: 20px 0;
+    transition: all 0.5s ease;
 }
 
-.profile{
-  background: #501B1D;
-  margin-bottom: 40px;
-  text-align: center;
+.profile {
+    background: #501B1D;
+    margin-bottom: 40px;
+    text-align: center;
 }
 
-.sidebar h2{
-  color: white;
-  margin-top: 30px;
+.sidebar h2 {
+    color: white;
+    margin-top: 30px;
 }
 
-.sidebar h4{
-  color: white;
-  margin-bottom: 60px;
+.sidebar h4 {
+    color: white;
+    margin-bottom: 60px;
 }
 
-.sidebar ul li a{
-  background: #501B1D;
-  display: block;
-  padding: 4vh 10%;
-  font-size: 16px;
-  position: relative;
-  color: white;
+.sidebar ul li a {
+    background: #501B1D;
+    display: block;
+    padding: 4vh 10%;
+    font-size: 16px;
+    position: relative;
+    color: white;
 }
 
 .sidebar ul li a:hover,
-.sidebar ul li a:active{
-  color: black;
-  background: #fff;
+.sidebar ul li a:active {
+    color: black;
+    background: #fff;
 }
 
 .sidebar ul li a:hover:before,
-.sidebar ul li a:active:before{
+.sidebar ul li a:active:before {
     display: block;
 }
 
-.mainpart{
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 77vw;
-  height: 100vh;
-  padding: 20px 0;
+.mainpart {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 77vw;
+    height: 100vh;
+    padding: 20px 0;
 
 }
 
-.tasktable{
-  margin-top: 30px;
+.tasktable {
+    margin-top: 30px;
+}
+
+.disp {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 70vw;
+    border: 1px solid brown;
+    border-radius: 20px;
+}
+
+.leftdiv .datediv {
+    padding-left: 10px;
+    font-size: 90%;
+}
+
+.leftdiv .titlediv {
+    padding-left: 40px;
+    font-size: 160%;
+}
+
+.leftdiv .categorydiv {
+    padding-left: 25px;
+    font-size: 90%;
+}
+
+.rightdiv .prioritydiv {
+    padding-left: 210px;
+    font-size: 100%;
+}
+
+.rightdiv .statusdiv {
+    padding-right: 220px;
+    font-size: 140%;
+}
+
+
+.disp:hover {
+    scale: 1.01;
 }

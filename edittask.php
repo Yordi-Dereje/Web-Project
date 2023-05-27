@@ -8,7 +8,7 @@ $user_data = check_login($con);
 
 if($_SERVER['REQUEST_METHOD'] == 'GET'){
     if(!isset($_GET["id"])){
-      header("Location: index.php");
+      header("Location: temphome.php");
       die;
     }
 
@@ -24,20 +24,18 @@ if($_SERVER['REQUEST_METHOD'] == 'GET'){
 
 
 if($_SERVER['REQUEST_METHOD'] == "POST"){
-    $tid = $task_data[''];
-    $id = $task_data['id'];
+    $tid = $task_data['TaskID'];
     $title = $_POST['title'];
     $description = $_POST['description']; 
     $category = $_POST['category'];
     $date = $_POST['date'];
-    $timeH = (int)$_POST['time_h'];
     $status = (int)$_POST['status'];
     $priority = (int)$_POST['priority'];
   
-      if(!empty($title) && !empty($description)){
-          $query = "update Tasks set UserID='$id', Title='$title', Description='$description', Category='$category', Date='$date', Time_H='$timeH', Time_M='$timeM', Status='$status', Priority='$priority' where TaskID='$tid'";
+      if(!empty($title)){
+          $query = "update Tasks set Title='$title', Description='$description', Category='$category', Date='$date', Status='$status', Priority='$priority' where Tasks.TaskID='$tid'";
           mysqli_query($con, $query);
-          header("Location: index.php");
+          header("Location: temphome.php");
           die;
       }
       else{
@@ -87,7 +85,6 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
      </select>
     <br><br>
     Date: <input type="date" name="date" value="<?php echo $task_data['Date']; ?>"><br><br>
-    Time: <input type="time" name="time_h" value="<?php echo $task_data['Time_H']; ?>">   <br><br>
     Status: 
       <select name="status" id="status" value="<?php echo $task_data['Status']; ?>">
         <option value="1" <?php if ($task_data['Status'] == 1) echo 'selected="selected"'?> >not started</option>
@@ -102,7 +99,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
         <option value="3" <?php if ($task_data['Priority'] == 3) echo 'selected="selected"'?> >High</option>
       </select>
     <br><br>
-	 <button class="btn" type="submit" class="btn">Update</button> 
+	 <button class="btn" type="submit">Update</button> 
 
  
   </form>

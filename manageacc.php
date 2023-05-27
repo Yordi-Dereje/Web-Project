@@ -17,7 +17,7 @@ $password = $_POST['password'];
 if(!empty($first_name) && !empty($last_name) && !empty($email) && !empty($phone) && !empty($user_name) && !empty($password)){
 		$query = "update Users set FirstName='$first_name', LastName='$last_name', Email='$email', Phone='$phone', UserName='$user_name', Password='$password' where id='$id';";
 	  mysqli_query($con, $query);
-		header("Location: index.php");
+		header("Location: temphome.php");
 		die;
 	}
 	else{
