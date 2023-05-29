@@ -13,24 +13,26 @@ $user_data = check_login($con);
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="temphome.css?version5" />
+  <link rel="stylesheet" href="temphome.css?version8" />
   <title>Home page</title>
 </head>
 <body>
   <div class="whole">
     <div class="sidebar">
-      <div class="profile">
+      <div class="profile" id="sticky">
+      <div class="namepart">
         <h2><?php echo $user_data['UserName']; ?></h2>
         <h4><?php echo $user_data['FirstName'].' '.$user_data['LastName']; ?></h4>
-        <ul>
-          <li><a href="temphome.php">Home</span></a></li>
-          <li><a href="newtask.php">New task</span></a></li>
-          <!-- <li><a href="#">Upcoming</span></a></li> -->
-          <li><a href="#">History</span></a></li>
-          <li><a href="setting.html">Settings</span></a></li>
-          <li><a href="manageacc.php">Manage Account</span></a></li>
-          <li><a href="front.html">Log out</span></a></li>
+      </div>
+      <ul>
+          <li><a href="temphome.php" onclick="toggle()">Home</a></li>
+          <li><a href="newtask.php" onclick="toggle()">New task</a></li>
+          <li><a href="report.php" onclick="toggle()">History</a></li>
+          <li><a href="setting.html" onclick="toggle()">Settings</a></li>
+          <li><a href="manageacc.php" onclick="toggle()">Manage Account</a></li>
+          <li><a href="front.html" onclick="toggle()">Log out</a></li>
         </ul>
+        <div class="toggle" onclick="toggle()">
       </div>
     </div>
 
@@ -50,10 +52,12 @@ $user_data = check_login($con);
                   <div class="datediv"><?= $row['Date']; ?></div>
                   <div class="titlediv"><?= $row['Title']; ?></div>
                   <div class="categorydiv">Category: <?= $row['Category']; ?></div>
+ 
                 </div>
                 <div class="rightdiv">
-                  <div class="prioritydiv"><?= $row['Pdes']; ?> priority</div>
+                  <div class="prioritydiv"><?= $row['Pdes']; ?></div>
                   <div class="statusdiv"><?= $row['Sdes']; ?></div>
+
                 </div>
               </div>
         <?php
@@ -66,3 +70,4 @@ $user_data = check_login($con);
   </div>
 </body>
 </html>
+<script src="stylemain.js"></script>

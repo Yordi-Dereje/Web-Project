@@ -27,7 +27,7 @@ if(!empty($first_name) && !empty($last_name) && !empty($email) && !empty($phone)
 
 
 ?>
-
+ 
 
 <!DOCTYPE html>
 <html lang="en">
@@ -44,7 +44,7 @@ if(!empty($first_name) && !empty($last_name) && !empty($email) && !empty($phone)
     <h2>Account details</h2>
     <form method="post">
       <div class="input-box">
-        <input  type="text" required name="first_name" value="<?php echo $user_data['FirstName']; ?>">
+<input  type="text" required name="first_name" value="<?php echo $user_data['FirstName']; ?>">
         <label for="firstName">First Name</label>
       </div>
       <div class="input-box">

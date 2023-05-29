@@ -7,26 +7,26 @@
   body{
 min-height: 1000px;
   }
-  html{
-    scroll-behavior: smooth;
-  }
-  header{
-position:fixed;
-top: 0;
-left: 0;
-width: 100%;
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 40px 100px;
-z-index: 1000;
-transition: 0.6s;
-  }
-  header.sticky{
-    padding: 5px 100px;
-    background:#fff;
-    border-bottom:1px solid (0,0,0,.1);
-  }
+html{
+  scroll-behavior: smooth;
+}
+header{
+  position:fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 100px;
+  z-index: 1000;
+  transition: 0.6s;
+}
+header.sticky{
+  padding: 5px 100px;
+  background:#fff;
+  border-bottom:1px solid (0,0,0,.1);
+}
 
   #header.logo {
     position: relative;

@@ -19,7 +19,6 @@ if($_SERVER['REQUEST_METHOD'] == 'GET'){
     if($result0 && mysqli_num_rows($result0) > 0){
       $task_data = mysqli_fetch_assoc($result0);
     }
-
 }
 
 
