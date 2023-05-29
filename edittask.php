@@ -50,7 +50,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="newTask.css">
+    <link rel="stylesheet" href="styles/newTask.css">
     <title>My website</title>
 </head>
 <body>
@@ -86,7 +86,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     Date: <input required type="date" name="date" value="<?php echo $task_data['Date']; ?>"><br><br>
     Status: 
       <select required name="status" id="status" value="<?php echo $task_data['Status']; ?>">
-        <option value="1" <?php if ($task_data['Status'] == 1) echo 'selected="selected"'?> >not started</option>
+        <option value="1" <?php if ($task_data['Status'] == 1) echo 'selected="selected"'?> >pending</option>
         <option value="2" <?php if ($task_data['Status'] == 2) echo 'selected="selected"'?> >on progress</option>
         <option value="3" <?php if ($task_data['Status'] == 3) echo 'selected="selected"'?> >completed</option> 
       </select>

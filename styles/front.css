@@ -70,7 +70,7 @@ header.sticky{
     position: relative;
     width: 100%;
     min-height: 100vh;
-    background: url(images/calendar.png);
+    background: url(../images/calendar.png);
     background-size: cover;
     display:flex ;
     justify-content: center;
@@ -85,7 +85,7 @@ header.sticky{
 
   }
   .sec{
-    background: url(images/pic2.png);
+    background: url(../images/pic2.png);
     background-size: cover;
     padding: 100px;
     min-height: 100vh;

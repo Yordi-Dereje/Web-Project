@@ -35,7 +35,7 @@ if(!empty($first_name) && !empty($last_name) && !empty($email) && !empty($phone)
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="styles/signup.css">
     <title>Manage account</title>
 </head>
 <body>  

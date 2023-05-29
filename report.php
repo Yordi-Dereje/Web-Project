@@ -14,11 +14,12 @@ $user_data = check_login($con);
     <title></title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="report.css?version1" />
+    <link rel="stylesheet" href="styles/report.css?version2" />
   </head>
   <body>
     <div class="mainpart">
       <h2> Completed tasks </h2>
+      <div class="subpart">
       <?php
           $id = $user_data['id'];
           $query2 = "select * from Tasks join Status_table on Tasks.Status=Status_table.Sid join Priority_table on Tasks.Priority=Priority_table.Pid  where UserID = '$id' and Status = 3 order by Date desc";
@@ -40,9 +41,14 @@ $user_data = check_login($con);
             }
           }
           else{
-            echo "No completed task yet";
+            echo "You have not completed a task yet";
           }
-          ?>
+?>
+<br>
+<div class="backbtn">
+   <button onclick="location.href='temphome.php'">Return</button>
+</div>
+  </div>
   </div>
 
 

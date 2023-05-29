@@ -5,7 +5,7 @@
 }
 
 body {
-    background: url(3.webp);
+    background: url(../images/officepic.jpg);
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -88,4 +88,9 @@ body {
     border-radius: 6px;
     cursor: pointer;
     font-weight: 500;
+}
+
+select, input {
+  background-color: transparent;
+  font-size: 110%;
 }

@@ -1,0 +1,73 @@
+* {
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url(../images/officepic.jpg);
+    background-size: cover;
+    display: flex;
+    color: white;
+    min-height: 100vh;
+}
+
+.mainpart{ 
+  margin: 20px;
+}
+
+.subpart{
+  margin-top: 40px;
+}
+
+.disp {
+    margin-top: 25px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 90vw;
+    height: 12vh;
+    border: 1px solid brown;
+    border-radius: 20px;
+   background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px); 
+    padding: 20px;
+    color: white;
+    font-size: 120%;
+    
+}
+
+button {
+    width: 30%;
+    height: 45px;
+    color: #fff;
+    background-color: #501B1D;
+    border: none;
+    outline: none;
+    border-radius: 9px;
+    cursor: pointer;
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.backbtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+@media(max-width: 700px) {
+  .disp{
+    flex-direction: column;
+    height: 17vh;
+    margin-left: 5px;
+  }
+}

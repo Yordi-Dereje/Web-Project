@@ -38,7 +38,7 @@
     margin: 10px 30px;
   }
   body{
-    background: url(images/signPic.jpeg);
+    background: url(../images/signPic.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;

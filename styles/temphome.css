@@ -7,7 +7,7 @@
 }
 
 .sidebar {
-    background: #501B1D;
+    background-color: #501B1D;    
     position: fixed;
     top: 0;
     left: 0;
@@ -15,11 +15,12 @@
     height: 100vh;
     padding: 20px 0;
     transition: all 0.5s ease;
+
 }
 
 .profile {
-    background: #501B1D;
-    margin-bottom: 40px;
+   background-color: #501B1D;    
+   margin-bottom: 40px;
     text-align: center;
 }
 
@@ -34,8 +35,8 @@
 }
 
 .sidebar ul li a {
-    background: #501B1D;
-    display: block;
+   background-color: #501B1D;   
+   display: block;
     padding: 5vh 10%;
     font-size: 16px;
     position: relative;
@@ -75,8 +76,8 @@
     height: 15vh;
     border: 1px solid brown;
     border-radius: 20px;
-    background: #501B1D;
-    cursor: pointer; 
+   background-color: #501B1D;   
+   cursor: pointer; 
 }
 
 .disp:hover{
@@ -87,11 +88,12 @@
     padding-left: 10px;
     font-size: 90%;
     color: white;
+    padding-top: 5px;
 }
 
 .leftdiv .titlediv {
     padding-left: 40px;
-    padding-top: 10px;
+    padding-top: 15px;
     padding-bottom: 10px;
     font-size: 160%;
     color: white;
@@ -104,14 +106,14 @@
 }
 
 .rightdiv .prioritydiv {
-    padding-left: 140px;
+    padding-left: 180px;
     font-size: 100%;
     color: white;
     padding-top: 10px;
 }
 
 .rightdiv .statusdiv {
-    padding-right: 80px;
+    padding-right: 90px;
     font-size: 130%;
     color: white;
 }
