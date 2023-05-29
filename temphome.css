@@ -1,5 +1,4 @@
 * {
-    color: black;
     list-style: none;
     text-decoration: none;
     margin: 0;
@@ -31,7 +30,7 @@
 
 .sidebar h4 {
     color: white;
-    margin-bottom: 100px;
+    margin-bottom: 80px;
 }
 
 .sidebar ul li a {
@@ -60,7 +59,7 @@
     right: 0;
     width: 77vw;
     height: 100vh;
-    padding: 20px 0;
+    padding: 40px 0;
 
 }
 
@@ -69,65 +68,53 @@
 }
 
 .disp {
-    margin-top: 20px;
+    margin-top: 25px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 70vw;
+    width: 75vw;
+    height: 12vh;
     border: 1px solid brown;
     border-radius: 20px;
+    background: #501B1D;
+    cursor: pointer;
+    
 }
 
 .leftdiv .datediv {
     padding-left: 10px;
     font-size: 90%;
+    color: white;
 }
 
 .leftdiv .titlediv {
     padding-left: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     font-size: 160%;
+    color: white;
 }
 
 .leftdiv .categorydiv {
     padding-left: 25px;
     font-size: 90%;
+    color: white; 
 }
 
 .rightdiv .prioritydiv {
     padding-left: 210px;
     font-size: 100%;
+    color: white;
+    padding-top: 10px;
 }
 
 .rightdiv .statusdiv {
     padding-right: 220px;
-    font-size: 140%;
+    font-size: 130%;
+    color: white;
 }
-
 
 .disp:hover {
     scale: 1.01;
 }
 
-.showstatus {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 70vw;
-
-}
-
-.showstatus button {
-    font-size: 125%;
-    padding: 10px 15px;
-    border-radius: 15px;
-    background-color: #501B1D;
-    cursor: pointer;
-    color: white;
-    border: none;
-    outline: none;
-}
-
-.showstatus button:hover {
-    scale: 1.02;
-}

@@ -57,7 +57,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 <body>
   <div class="wrapper">
     <div class="form-box">
-      <h2> Edit task </h2>
+      <h2> Details </h2>
       <form method="post">
         <div class="input-box">
           <input  type="text" required name="title" value="<?php echo $task_data['Title']; ?>">
@@ -84,16 +84,16 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
         <option value="study" <?php if ($task_data['Category'] == 'study') echo 'selected="selected"'?> >Study</option>
      </select>
     <br><br>
-    Date: <input type="date" name="date" value="<?php echo $task_data['Date']; ?>"><br><br>
+    Date: <input required type="date" name="date" value="<?php echo $task_data['Date']; ?>"><br><br>
     Status: 
-      <select name="status" id="status" value="<?php echo $task_data['Status']; ?>">
+      <select required name="status" id="status" value="<?php echo $task_data['Status']; ?>">
         <option value="1" <?php if ($task_data['Status'] == 1) echo 'selected="selected"'?> >not started</option>
         <option value="2" <?php if ($task_data['Status'] == 2) echo 'selected="selected"'?> >on progress</option>
         <option value="3" <?php if ($task_data['Status'] == 3) echo 'selected="selected"'?> >completed</option> 
       </select>
     <br><br> 
     Priority: 
-      <select name="priority" id="priority" value="<?php echo $task_data['Priority']; ?>">
+      <select required name="priority" id="priority" value="<?php echo $task_data['Priority']; ?>">
         <option value="1" <?php if ($task_data['Priority'] == 1) echo 'selected="selected"'?> >Low</option>
         <option value="2" <?php if ($task_data['Priority'] == 2) echo 'selected="selected"'?> >Mid</option>
         <option value="3" <?php if ($task_data['Priority'] == 3) echo 'selected="selected"'?> >High</option>
