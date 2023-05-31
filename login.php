@@ -19,8 +19,9 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 				header("Location: temphome.php");
 				die;
 			}
-			else{
-				echo "wrong username or password";
+      else{?>
+        <script>alert('Wrong username or password')</script>
+       <?php
 			}
 		}
 		else{
