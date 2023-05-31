@@ -21,11 +21,11 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
         header("Location: temphome.php");
         die;
     }
-	else{
- 		echo "Please enter valid info";
+    else{?>
+    <script> alert('Please enter valid info') </script>
+    <?php
 	}
 }
-
 ?>
 
 

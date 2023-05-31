@@ -14,8 +14,10 @@ $email = $_POST['email'];
 $phone = $_POST['phone'];
 $user_name = $_POST['user_name'];
 $password = $_POST['password'];
-if(!empty($first_name) && !empty($last_name) && !empty($email) && !empty($phone) && !empty($user_name) && !empty($password)){
-		$query = "update Users set FirstName='$first_name', LastName='$last_name', Email='$email', Phone='$phone', UserName='$user_name', Password='$password' where id='$id';";
+$sec_q = $_POST['secQ'];
+$sec_a = $_POST['secA'];
+if(!empty($first_name) && !empty($last_name) && !empty($email) && !empty($phone) && !empty($user_name) && !empty($password) && !empty($sec_q) && !empty($sec_a)){
+		$query = "update Users set FirstName='$first_name', LastName='$last_name', Email='$email', Phone='$phone', UserName='$user_name', Password='$password', SecQuestion='$sec_q', SecAnswer='$sec_a' where id='$id';";
 	  mysqli_query($con, $query);
 		header("Location: temphome.php");
 		die;
@@ -67,6 +69,21 @@ if(!empty($first_name) && !empty($last_name) && !empty($email) && !empty($phone)
         <input  type="text" required name="password" value="<?php echo $user_data['Password']; ?>">
         <label for="pwd">Password</label>
       </div>
+      <select name="secQ" id="secQ" required>
+            <optgroup label="Security questions">
+            <option value="pet" <?php if ($user_data['SecQuestion'] == 'pet') echo 'selected="selected"'?> >What is your pets name?</option>
+            <option value="high school" <?php if ($user_data['SecQuestion'] == 'high school') echo 'selected="selected"'?> >Which high school did you go to?</option>
+            <option value="color" <?php if ($user_data['SecQuestion'] == 'color') echo 'selected="selected"'?> >What is your favorite color?</option>
+            <option value="job" <?php if ($user_data['SecQuestion'] == 'job') echo 'selected="selected"'?> >What is your occupation?</option>
+            <option value="mother" <?php if ($user_data['SecQuestion'] == 'mother') echo 'selected="selected"'?> >What is your mothers name?</option>
+            <option value="spouse" <?php if ($user_data['SecQuestion'] == 'spouse') echo 'selected="selected"'?> >What is the name of your spouse?</option>
+            </optgroup>
+          </select>
+
+          <div class="input-box">
+            <input  type="text" required name="secA" value="<?php echo $user_data['SecAnswer']; ?>">
+            <label for="secA">Security Answer</label>
+          </div>
       <button class="btn" type="submit" class="btn">Update</button>
     </form>
   </div>

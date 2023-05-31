@@ -10,16 +10,20 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 	$email = $_POST['email'];
   $phone = $_POST['phone'];
 	$user_name = $_POST['user_name'];
-	$password = $_POST['password'];
+  $password = $_POST['password'];
+  $sec_q = $_POST['secQ'];
+  $sec_a = $_POST['secA'];
 
-	if(!empty($user_name) && !empty($password)){
-		$query = "insert into Users (FirstName, LastName, Email, Phone, UserName, Password) values ('$first_name', '$last_name', '$email', '$phone', '$user_name', '$password')";
+	if(!empty($first_name) && !empty($last_name) && !empty($email) && !empty($phone) && !empty($user_name) && !empty($password) && !empty($sec_q) && !empty($sec_a)){
+		$query = "insert into Users (FirstName, LastName, Email, Phone, UserName, Password, SecQuestion, SecAnswer) values ('$first_name', '$last_name', '$email', '$phone', '$user_name', '$password', '$sec_q', '$sec_a')";
 	  mysqli_query($con, $query);
 		header("Location: login.php");
 		die;
 	}
 	else{
-		echo "Please enter valid info";
+	?>
+  <script> alert('Please enter necessary input') </script>
+  <?php  
 	}
 }
 
@@ -30,7 +34,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles/signup.css">
+  <link rel="stylesheet" href="styles/signup.css?version1" />
   <title>Document</title>
 </head>
 <body>
@@ -71,6 +75,23 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
             <input  type="password" required name="password" value="">
             <label for="pwd">Password</label>
           </div>
+          <select name="secQ" id="secQ" required>
+            <optgroup label="Security questions">
+            <option value="pet">What is your pets name?</option>
+            <option value="high school">Which high school did you go to?</option>
+            <option value="color">What is your favorite color?</option>
+            <option value="job">What is your occupation?</option>
+            <option value="mother">What is your mothers name?</option>
+            <option value="spouse">What is the name of your spouse?</option>
+            </optgroup>
+          </select>
+
+          <div class="input-box">
+            <input  type="text" required name="secA" value="">
+            <label for="secA">Security Answer</label>
+          </div>
+
+
           <button class="btn" type="submit" class="btn">Register</button>
         </form>
     </div>
