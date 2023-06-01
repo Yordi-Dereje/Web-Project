@@ -60,7 +60,7 @@ $user_data = check_login($con);
 
                 </div>
               </div>
-        <?php
+         <?php
             }
           }
           else{

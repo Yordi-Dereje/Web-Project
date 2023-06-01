@@ -106,14 +106,14 @@
 }
 
 .rightdiv .prioritydiv {
-    padding-left: 180px;
+    padding-left: 160px;
     font-size: 100%;
     color: white;
     padding-top: 10px;
 }
 
 .rightdiv .statusdiv {
-    padding-right: 90px;
+    padding-right: 140px;
     font-size: 130%;
     color: white;
 }
@@ -229,7 +229,7 @@ html{
   }
 .sidebar ul li a{
   color: #501B1D;
-  padding: 4vh 35%;
+  padding: 4vh 45%;
   background-color: white;
   position: relative;
   margin: 0; 

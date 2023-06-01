@@ -120,4 +120,16 @@
     border-radius: 6px;
     cursor: pointer;
     font-weight: 500;
+    font-size: 110%
+  }
+
+  button{
+    border: none;
+    background-color: transparent; 
+    font-size: 100%;
+    cursor: pointer;
+  }
+
+  .passforgot{
+    text-align: right; 
   }

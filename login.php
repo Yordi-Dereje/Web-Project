@@ -19,8 +19,9 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 				header("Location: temphome.php");
 				die;
 			}
-			else{
-				echo "wrong username or password";
+      else{?>
+        <script>alert('Wrong username or password')</script>
+       <?php
 			}
 		}
 		else{
@@ -35,7 +36,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles/login.css">
+  <link rel="stylesheet" href="styles/login.css?version1" />
   <title>Document</title>
 </head>
 <body class="login_body">
@@ -47,7 +48,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
         <li><a href="signup.php">Sign up</a></li>
       </ul>
     </nav>
-  </header>
+  </header> 
 <div class="wrapper">
   <div class="form-box">
    <h2>Login</h2>
@@ -60,10 +61,13 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     <input type="password" required name="password" value="">
     <label for="pwd">Password</label>
 </div>
+<div>
 <button class="btn" type="submit" class="btn">Login</button>
 </div>
-<div>
-  <a href="passWordReset.php">Forgot password?</a>
+<div class="passforgot">
+  <button><a href="getpass.php">Forgot password?</a></button>
+</div>
+
 </div>
     
    </form>
