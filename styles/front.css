@@ -302,3 +302,42 @@ display: block;
 font-size: 12px;
 font-weight: 300;
 }
+.front_contact{
+  background-color: #FFFFF0;
+  color: #501B1D; 
+}
+
+
+input{
+  width: 55%;
+  height: 45px;
+  font-family: ‘Poppins’,sans-serif;
+  font-size: 15px;
+  border: 2px solid #d1d3d4;
+  padding: 17px;
+  color: #111111;
+  font-weight: 500;
+  position: relative;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  margin-left: 20%;
+  background-color: #FFFFF0;
+}
+
+input:focus{
+  outline: none;
+  border-color: #501B1D;
+}
+
+.front_contact h2{
+  font-size: 150%;
+  padding: 3% 30%;
+}
+
+.front_contact h6{
+  margin: 0 40%;
+  font-size: 120%;
+}
+.toggle{
+  display:none;
+}
