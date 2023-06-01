@@ -11,6 +11,6 @@ Taskmate is the perfect choice for people looking to take control of their day. 
 | ----- | ----- |
 | Yordanos Dereje | [Link to account](https://github.com/Yordi-Dereje/)|
 | Tinella Fikru  | [Link to account](https://github.com/tinella-fikru/)|
-| Reem Abdella | [Link to account](https://github.com/Reema_abde/)|
+| Reem Abdella | [Link to account](https://github.com/Reemaabde/)|
 | Rehobot Ayele | [Link to account](https://github.com/robbyy2a/)|
 
