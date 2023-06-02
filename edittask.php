@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-include("connection.php");
-include("functions.php");
+include("db/connection.php");
+include("db/functions.php");
 
 $user_data = check_login($con);
 
@@ -50,7 +50,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/newTask.css">
+    <link rel="stylesheet" href="styles/newTask.css?version2" />
     <title>My website</title>
 </head>
 <body>
@@ -67,7 +67,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
           <label for="description">Description</label>
         </div>
 
-	    Category: 
+	    <label> Category </label>
       <select name="category" id="category" required>
         <option value="reading" <?php if ($task_data['Category'] == 'reading') echo 'selected="selected"'?> >Reading</option>
         <option value="sports" <?php if ($task_data['Category'] == 'sports') echo 'selected="selected"'?> >Sports</option>
@@ -83,15 +83,15 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
         <option value="study" <?php if ($task_data['Category'] == 'study') echo 'selected="selected"'?> >Study</option>
      </select>
     <br><br>
-    Date: <input required type="date" name="date" value="<?php echo $task_data['Date']; ?>"><br><br>
-    Status: 
+    Date <input required type="date" name="date" class="date" value="<?php echo $task_data['Date']; ?>"><br><br>
+    <label> Status </label>
       <select required name="status" id="status" value="<?php echo $task_data['Status']; ?>">
         <option value="1" <?php if ($task_data['Status'] == 1) echo 'selected="selected"'?> >pending</option>
         <option value="2" <?php if ($task_data['Status'] == 2) echo 'selected="selected"'?> >on progress</option>
         <option value="3" <?php if ($task_data['Status'] == 3) echo 'selected="selected"'?> >completed</option> 
       </select>
     <br><br> 
-    Priority: 
+    <label> Priority </label>
       <select required name="priority" id="priority" value="<?php echo $task_data['Priority']; ?>">
         <option value="1" <?php if ($task_data['Priority'] == 1) echo 'selected="selected"'?> >Low</option>
         <option value="2" <?php if ($task_data['Priority'] == 2) echo 'selected="selected"'?> >Mid</option>

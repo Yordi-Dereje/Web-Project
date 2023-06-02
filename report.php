@@ -14,11 +14,13 @@ $user_data = check_login($con);
     <title></title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles/report.css?version2" />
+    <link rel="stylesheet" href="styles/report.css?version4" />
   </head>
   <body>
     <div class="mainpart">
-      <h2> Completed tasks </h2>
+      <div class="backbtn">
+        <button onclick="location.href='temphome.php'"><img src="images/arrow.png" height=60px width=60px></button>
+      </div>
       <div class="subpart">
       <?php
           $id = $user_data['id'];
@@ -45,9 +47,7 @@ $user_data = check_login($con);
           }
 ?>
 <br>
-<div class="backbtn">
-   <button onclick="location.href='temphome.php'">Return</button>
-</div>
+
   </div>
   </div>
 

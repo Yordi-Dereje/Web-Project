@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-include("connection.php");
-include("functions.php");
+include("db/connection.php");
+include("db/functions.php");
 
 $user_data = check_login($con);
 
@@ -35,7 +35,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/newTask.css">
+    <link rel="stylesheet" href="styles/newTask.css?version1" />
     <title>My website</title>
 </head> 
 <body>

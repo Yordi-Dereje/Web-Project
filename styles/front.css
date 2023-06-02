@@ -102,19 +102,22 @@ header.sticky{
     max-width: 800px;
     margin: 0 auto;
   }
+  .text h3{
+    font-size: 46px;
+  }
   h2{
-    font-size: 40px;
+    font-size: 48px;
     font-weight: 200;
     margin-bottom: 10px;
   }
   p{
     position: relative;
-    font-size: 18px;
+    font-size: 24px;
     font-weight: 300;
     margin-bottom:20px ;
     letter-spacing: 1px;
-
   }
+
   .btn{
     position: relative;
     display: inline-block;
@@ -138,9 +141,10 @@ header.sticky{
   }
   
   .front_quote h4, .front_quote2 h4{
-    font-size: 150%;
+    font-size: 190%;
     display: flex;
-    padding: 10% 25% 5%;
+    justify-content: space-around; 
+    padding-top: 100px;
   }
   
   .front_quote h5,.front_quote2 h5{
@@ -154,7 +158,7 @@ header.sticky{
   }
     
   .front_contact h2{
-    font-size: 150%;
+    font-size: 180%;
     padding: 3% 30%;
   }
   
@@ -165,7 +169,20 @@ header.sticky{
   .toggle{
     display:none;
   }
-  @media(max-width: 900px){
+
+  .btn{
+    background-color: #501B1D;
+    color: white;
+    border-radius: 6px;
+    font-size: 110%;
+  }
+
+  .btn:hover{
+    scale: 1.02;
+    font-weight: 500;
+  }
+
+  @media(max-width: 800px){
   .front_quote h4, .front_quote2 h4{
     font-size: 180%;
     display: flex;
@@ -175,14 +192,14 @@ header.sticky{
   .front_quote h5,.front_quote2 h5{
     margin: 0 5% 10% 42%;
     font-size: 130%;
-        }
-    .toggle{
+  }
+  .toggle{
         display: block;
         position: relative;
         width: 30px;
         height: 30px;
         cursor: pointer;
-    }
+  }
     .toggle:before{
         content: '';
         position: absolute;

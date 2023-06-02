@@ -24,6 +24,14 @@
     text-align: center;
 }
 
+body {
+    background: url(../images/3.webp);
+    background-size: cover;
+    display: flex;
+    color: white;
+    min-height: 100vh;
+}
+
 .sidebar h2 {
     color: white;
     margin-top: 50px;
@@ -59,8 +67,9 @@
     top: 0;
     right: 0;
     width: 77vw;
-    height: 100vh;
+    height: 100%;
     padding: 40px 0;
+    overflow-y: auto;
 }
 
 .tasktable {
@@ -76,8 +85,8 @@
     height: 15vh;
     border: 1px solid brown;
     border-radius: 20px;
-   background-color: #501B1D;   
-   cursor: pointer; 
+    background-color: #501B1D;   
+    cursor: pointer; 
 }
 
 .disp:hover{
@@ -100,7 +109,7 @@
 }
 
 .leftdiv .categorydiv {
-    padding-left: 25px;
+    padding-left: 40px;
     font-size: 90%;
     color: white; 
 }
@@ -110,12 +119,15 @@
     font-size: 100%;
     color: white;
     padding-top: 10px;
+    text-align: right;
+    padding-right: 10px;
 }
 
 .rightdiv .statusdiv {
     padding-right: 140px;
     font-size: 130%;
     color: white;
+    padding-top: 10px;
 }
 
 .disp:hover {
@@ -133,8 +145,29 @@ html{
 @media(max-width: 800px){
   .disp{
     margin-top: 25px;
-    width: 95vw;
+    width: 90vw;
+    height: 18vh;
+    flex-direction: row;
   }
+
+.leftdiv .categorydiv {
+    padding-left: 40px;
+}
+
+.rightdiv .prioritydiv {
+    padding-right: 10px;
+    font-size: 100%;
+    padding-top: 10px;
+    text-align: right;
+}
+
+.rightdiv .statusdiv {
+    padding-left: 20px;
+    font-size: 120%;
+    text-align: right;
+    padding-top: 10px;
+}
+
 
 .profile h2 {
   margin-top: 15px;
@@ -164,7 +197,7 @@ html{
   }
 
   .sidebar{
-    background-color: white;
+    background-color: transparent;
   }
   .toggle{
     display: block;

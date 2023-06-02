@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-include("connection.php");
-include("functions.php");
+include("db/connection.php");
+include("db/functions.php");
 
 $user_data = check_login($con);
 if($_SERVER['REQUEST_METHOD'] == "POST"){
@@ -36,7 +36,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/newTask.css">
+    <link rel="stylesheet" href="styles/newTask.css?version5" />
     <title>My website</title>
 </head>
 <body>
@@ -53,7 +53,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
           <label for="description">Description</label>
         </div>
     
-    Category: <select name="category" id="category" required>
+    <label> Category </label> <br> <select name="category" id="category" required>
         <option value="reading">Reading</option>
         <option value="sports">Sports</option>
         <option value="nutrition">Nutrition</option>
@@ -67,11 +67,16 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
         <option value="meditation">Meditation</option>
         <option value="study">Study</option>
      </select><br><br>
-    Date: <input type="date" name="date"><br><br>
-    Priority: <br> <input type="radio" name="priority" value="1"> Low  <input type="radio" name="priority" value="2"> Mid <input type="radio" name="priority" value="3"> High <br><br>
+    <label> Date </label> <input type="date" name="date" class="date" value = "<?php echo date('Y-m-d') ?>"><br><br>
+    <label> Priority </label> 
+    <select required name="priority" id="priority" value="<?php echo $task_data['Priority']; ?>">
+      <option value="1"> Low</option>
+      <option value="2"> Mid</option>
+      <option value="3"> High</option>
+    </select> 
+    <br><br>
 	  <button class="btn" type="submit" class="btn">Register</button> 
-  </div>
-  <!-- <button class="btn" type="submit" class="btn">Register</button> -->
+  </div> 
   </div>
   </form>
   </body>

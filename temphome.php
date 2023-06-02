@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-include("connection.php");
-include("functions.php");
+include("db/connection.php");
+include("db/functions.php");
 
 $user_data = check_login($con);
 ?>
@@ -13,7 +13,7 @@ $user_data = check_login($con);
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles/temphome.css?version9" />
+  <link rel="stylesheet" href="styles/temphome.css?version4" />
   <title>Home page</title>
 </head>
 <body>
@@ -27,13 +27,11 @@ $user_data = check_login($con);
       <ul>
           <li><a href="temphome.php" onclick="toggle()">Home</a></li>
           <li><a href="newtask.php" onclick="toggle()">New task</a></li>
-          <li><a href="report.php" onclick="toggle()">History</a></li>
-          <li><a href="setting.html" onclick="toggle()">Settings</a></li>
+          <li><a href="report.php" onclick="toggle()">Progress report</a></li> 
           <li><a href="manageacc.php" onclick="toggle()">Manage Account</a></li>
           <li><a href="front.html" onclick="toggle()">Log out</a></li>
         </ul>
-        <div class="toggle" onclick="toggle()">
-      </div>
+        <div class="toggle" onclick="toggle()"></div>
     </div>
 
     <div class="mainpart">
@@ -70,4 +68,4 @@ $user_data = check_login($con);
   </div>
 </body>
 </html>
-<script src="stylemain.js"></script>
+<script src="scripts/stylemain.js"></script>
