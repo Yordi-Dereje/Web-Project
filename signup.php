@@ -34,7 +34,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles/signup.css?version2" />
+  <link rel="stylesheet" href="styles/signup.css?version3" />
   <title>Document</title>
 </head>
 <body>
@@ -43,7 +43,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
       <h2>TASKMATE</h2>
       <ul>
         <li><a href="front.html">Home</a></li>
-        <li><a href="login.php">SignIn</a></li>
+        <li><a href="login.php">Log In</a></li>
       </ul>
     </nav>
   </header>

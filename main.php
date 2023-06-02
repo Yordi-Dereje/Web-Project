@@ -13,7 +13,7 @@ $user_data = check_login($con);
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles/temphome.css?version4" />
+  <link rel="stylesheet" href="styles/main.css?version5" />
   <title>Home page</title>
 </head>
 <body>
@@ -25,7 +25,7 @@ $user_data = check_login($con);
         <h4><?php echo $user_data['FirstName'].' '.$user_data['LastName']; ?></h4>
       </div>
       <ul>
-          <li><a href="temphome.php" onclick="toggle()">Home</a></li>
+          <li><a href="main.php" onclick="toggle()">Home</a></li>
           <li><a href="newtask.php" onclick="toggle()">New task</a></li>
           <li><a href="report.php" onclick="toggle()">Progress report</a></li> 
           <li><a href="manageacc.php" onclick="toggle()">Manage Account</a></li>
@@ -55,7 +55,6 @@ $user_data = check_login($con);
                 <div class="rightdiv">
                   <div class="prioritydiv"><?= $row['Pdes']; ?></div>
                   <div class="statusdiv"><?= $row['Sdes']; ?></div>
-
                 </div>
               </div>
          <?php

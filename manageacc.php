@@ -19,7 +19,7 @@ $sec_a = $_POST['secA'];
 if(!empty($first_name) && !empty($last_name) && !empty($email) && !empty($phone) && !empty($user_name) && !empty($password) && !empty($sec_q) && !empty($sec_a)){
 		$query = "update Users set FirstName='$first_name', LastName='$last_name', Email='$email', Phone='$phone', UserName='$user_name', Password='$password', SecQuestion='$sec_q', SecAnswer='$sec_a' where id='$id';";
 	  mysqli_query($con, $query);
-		header("Location: temphome.php");
+		header("Location: main.php");
 		die;
 	}
 	else{

@@ -19,7 +19,7 @@ $user_data = check_login($con);
   <body>
     <div class="mainpart">
       <div class="backbtn">
-        <button onclick="location.href='temphome.php'"><img src="images/arrow.png" height=60px width=60px></button>
+        <button onclick="location.href='main.php'"><img src="images/arrow.png" height=60px width=60px></button>
       </div>
       <div class="subpart">
       <?php
@@ -50,8 +50,5 @@ $user_data = check_login($con);
 
   </div>
   </div>
-
-
-  
   </body>
 </html>

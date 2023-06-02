@@ -16,7 +16,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 			$user_data = mysqli_fetch_assoc($result);
 			if($user_data['Password'] === $password){
 				$_SESSION['id'] = $user_data['id'];
-				header("Location: temphome.php");
+				header("Location: main.php");
 				die;
 			}
       else{?>
@@ -70,11 +70,8 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 
 </div>
     
-   </form>
+</form>
 </div>
-</div>
-      <!-- <a href="home.html">Login</a> -->
-    
-
+</div> 
 </body>
 </html>

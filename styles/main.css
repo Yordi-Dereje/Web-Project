@@ -28,7 +28,7 @@ body {
     background: url(../images/3.webp);
     background-size: cover;
     display: flex;
-    color: white;
+    color: black;
     min-height: 100vh;
 }
 

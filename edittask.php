@@ -8,7 +8,7 @@ $user_data = check_login($con);
 
 if($_SERVER['REQUEST_METHOD'] == 'GET'){
     if(!isset($_GET["id"])){
-      header("Location: temphome.php");
+      header("Location: main.php");
       die;
     }
 
@@ -34,7 +34,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
       if(!empty($title)){
           $query = "update Tasks set Title='$title', Description='$description', Category='$category', Date='$date', Status='$status', Priority='$priority' where TaskID='$tid'";
           mysqli_query($con, $query);
-          header("Location: temphome.php");
+          header("Location: main.php");
           die;
       }
       else{

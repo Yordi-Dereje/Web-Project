@@ -18,7 +18,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     if(!empty($title) && !empty($description)){
         $query = "insert into Tasks (UserID, Title, Description, Category, Date, Status, Priority) values ('$id', '$title', '$description', '$category', '$date', '$status', '$priority')";
         mysqli_query($con, $query);
-        header("Location: temphome.php");
+        header("Location: main.php");
         die;
     }
     else{?>

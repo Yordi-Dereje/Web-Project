@@ -122,7 +122,8 @@
     outline: none;
     border-radius: 6px;
     cursor: pointer;
-    font-weight: 500; 
+    font-weight: 500;
+    font-size: 1.1em;
 }
 
 select{

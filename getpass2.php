@@ -18,12 +18,12 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     </script>
 
 <?php
-
+    
 		}
     else{?>
         <script>alert('Incorrect answer')</script>
        <?php
-		}
+    } 
 }
 
 ?>
@@ -35,10 +35,20 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/newTask.css?version1" />
+    <link rel="stylesheet" href="styles/newTask.css?version3" />
     <title>My website</title>
 </head> 
 <body>
+<header class="login_header">
+    <nav>
+      <h2>TASKMATE</h2>
+      <ul>
+        <li><a href="front.html">Home</a></li>
+        <li><a href="login.php">Log in</a></li>
+      </ul>
+    </nav>
+  </header> 
+
   <div class="wrapper">
     <div class="form-box">
       <h2> Security question </h2>
