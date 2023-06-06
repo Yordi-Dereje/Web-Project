@@ -40,6 +40,15 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     <title>My website</title>
 </head>
 <body>
+  <header>
+    <nav>
+      <h2>TASKMATE</h2>
+      <ul>
+        <li><a href="main.php">Home</a></li>
+      </ul>
+    </nav>
+  </header>
+
   <div class="wrapper">
     <div class="form-box">
       <h2> Add task </h2>

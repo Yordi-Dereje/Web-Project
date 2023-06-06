@@ -258,7 +258,7 @@ header.sticky{
 
 .teamBx .member{
   position: relative;
-  background: #fff;
+  background: transparent;
   min-height: 300px;
   width: 250px;
   margin: 0 auto;

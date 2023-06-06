@@ -25,8 +25,7 @@
 }
 
 body {
-    background: url(../images/3.webp);
-    background-size: cover;
+    
     display: flex;
     color: black;
     min-height: 100vh;
@@ -43,8 +42,8 @@ body {
 }
 
 .sidebar ul li a {
-   background-color: #501B1D;   
-   display: block;
+    background-color: #501B1D;   
+    display: block;
     padding: 5vh 10%;
     font-size: 16px;
     position: relative;

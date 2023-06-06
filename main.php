@@ -13,7 +13,7 @@ $user_data = check_login($con);
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles/main.css?version5" />
+  <link rel="stylesheet" href="styles/main.css?version6" />
   <title>Home page</title>
 </head>
 <body>
@@ -28,7 +28,7 @@ $user_data = check_login($con);
           <li><a href="main.php" onclick="toggle()">Home</a></li>
           <li><a href="newtask.php" onclick="toggle()">New task</a></li>
           <li><a href="report.php" onclick="toggle()">Progress report</a></li> 
-          <li><a href="manageacc.php" onclick="toggle()">Manage Account</a></li>
+          <li><a href=w"manageacc.php" onclick="toggle()">Manage Account</a></li>
           <li><a href="front.html" onclick="toggle()">Log out</a></li>
         </ul>
         <div class="toggle" onclick="toggle()"></div>
