@@ -38,7 +38,7 @@ if(!empty($first_name) && !empty($last_name) && !empty($email) && !empty($phone)
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
-    <link rel="stylesheet" href="styles/manageacc.css?version4" />
+    <link rel="stylesheet" href="styles/manageacc.css?version6" />
     <link rel="stylesheet" href="styles/color.css?version1" />
     <title>Manage account</title>
 </head>
@@ -67,7 +67,7 @@ if(!empty($first_name) && !empty($last_name) && !empty($email) && !empty($phone)
     <h2>Account details</h2>
     <form method="post">
       <div class="input-box">
-<input  type="text" required name="first_name" value="<?php echo $user_data['FirstName']; ?>">
+<input type="text" required name="first_name" value="<?php echo $user_data['FirstName']; ?>">
         <label for="firstName">First Name</label>
       </div>
       <div class="input-box">
@@ -105,7 +105,7 @@ if(!empty($first_name) && !empty($last_name) && !empty($email) && !empty($phone)
             <input  type="text" required name="secA" value="<?php echo $user_data['SecAnswer']; ?>">
             <label for="secA">Security Answer</label>
           </div>
-      <button class="btn" type="submit" class="btn">Update</button>
+      <button class="btn" type="submit">Update</button>
     </form>
   </div>
   </div>

@@ -23,7 +23,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: -1;
 }
 
 .wrapper .sidespace {
@@ -235,12 +234,13 @@ select,
         width: 95vw;
         padding: 100px 20px;
         position: relative;
-        top: 90px;
+        top: 100px;
 
     }
 
     .wrapper {
         flex-direction: column;
+        top: 170px;
     }
 
     .wrapper .sidespace {
@@ -299,9 +299,9 @@ select,
         top: 5px;
         width: 100%;
         height: 2px;
-        background: black;
+        background: white;
         z-index: -1;
-        box-shadow: 0 10px 0 black;
+        box-shadow: 0 10px 0 white;
         transition: 0.5s;
     }
 
@@ -311,7 +311,7 @@ select,
         bottom: 4px;
         width: 100%;
         height: 2px;
-        background: black;
+        background: white;
         z-index: 1;
         transition: 0.5s;
     }
@@ -375,6 +375,6 @@ select,
     }
 
     h4 {
-        top: 80px;
+        top: 90px;
     }
 }

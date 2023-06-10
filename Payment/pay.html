@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="premium.css">
+   
+</head>
+<body>
+   
+<form method="POST" action="https://api.chapa.co/v1/hosted/pay" >
+        <input type="hidden" name="public_key" value="$public_key" />
+        <input type="hidden" name="tx_ref" value="$tex_ref" />
+        <input type="hidden" name="amount" value="50" />
+        <input type="hidden" name="currency" value="ETB" />
+        <input type="hidden" name="email" value="<?php echo $user_data['Email']; ?>" />
+        <input type="hidden" name="first_name" value="<?php echo $user_data['FirstName']; ?>" />
+        <input type="hidden" name="last_name" value="<?php echo $user_data['LastName']; ?>" />
+        <input type="hidden" name="title" value="Let us do this" />
+        <input type="hidden" name="description" value="Paying with Confidence with cha" />
+        <input type="hidden" name="logo" value="https://chapa.link/asset/images/chapa_swirl.svg" />
+        <input type="hidden" name="callback_url" value="https://example.com/callbackurl" />
+        <input type="hidden" name="return_url" value="https://example.com/returnurl" />
+        <input type="hidden" name="meta[title]" value="test" />
+        <button type="submit">Pay Now</button>
+    </form>
+    <form method="get" action="pay.html">
+        <div class="input-box">
+            <input  type="text" required name="First_name" value="<?php echo $user_data['FirstName']; ?>">
+            <label for="FirstName">First Name</label>
+          </div>
+          <div class="input-box">
+            <input  type="text" required name="Last_name" value="<?php echo $user_data['LastName']; ?>">
+            <label for="LastName">Last Name</label>
+          </div>
+          <div class="input-box">
+            <input  type="email" required name="email" value="<?php echo $user_data['Email']; ?>">
+            <label for="email">Email</label>
+          </div>
+          <div class="input-box">
+            <input type="number" name="amount" value="50">
+            <label for="Amount">Amount</label>
+          </div>
+    </form>
+</body>
+</html>
+<php
+const $tex_ref="";
+const $public_key="CHAPUBK_TEST-kVTQpDKesF3vCBh5C5g82SpePqcKyNFO";
+?>
