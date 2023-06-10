@@ -36,20 +36,32 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/newTask.css?version5" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <link rel="stylesheet" href="styles/newTask.css?version12" />
+    <link rel="stylesheet" href="styles/color.css?version1" />
     <title>My website</title>
 </head>
 <body>
-  <header>
-    <nav>
-      <h2>TASKMATE</h2>
+<div class="sidebar">
+      <div class="profile" id="sticky">
+      <div class="namepart">
+        <h2>TaskMate</h2>
+      </div>
       <ul>
-        <li><a href="main.php">Home</a></li>
+        <li><a href="main.php" onclick="toggle()"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+        <li><a href="newtask.php" onclick="toggle()"><i class="fa fa-plus" aria-hidden="true"></i></a></li>
+        <li><a href="manageacc.php" class="selected_one" onclick="toggle()"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+        <li><a href="front.html" onclick="toggle()"><i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
       </ul>
-    </nav>
-  </header>
 
+        <div class="toggle" onclick="toggle()"></div>
+    </div>
+</div>
+<h4><?php echo $user_data['FirstName'].' '.$user_data['LastName']; ?></h4>
   <div class="wrapper">
+    <div class="sidespace">
+      <label class="sidespace-text">TASKMATE</label>
+    </div>
     <div class="form-box">
       <h2> Add task </h2>
       <form method="post">
@@ -62,7 +74,8 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
           <label for="description">Description</label>
         </div>
     
-    <label> Category </label> <br> <select name="category" id="category" required>
+    <br> <select name="category" id="category" required>
+        <option value="" disabled selected hidden>Category</option>
         <option value="reading">Reading</option>
         <option value="sports">Sports</option>
         <option value="nutrition">Nutrition</option>
@@ -77,8 +90,8 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
         <option value="study">Study</option>
      </select><br><br>
     <label> Date </label> <input type="date" name="date" class="date" value = "<?php echo date('Y-m-d') ?>"><br><br>
-    <label> Priority </label> 
-    <select required name="priority" id="priority" value="<?php echo $task_data['Priority']; ?>">
+    <select required name="priority" id="priority" value="">
+      <option value="" disabled selected hidden>Priority</option>
       <option value="1"> Low</option>
       <option value="2"> Mid</option>
       <option value="3"> High</option>
@@ -88,5 +101,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
   </div> 
   </div>
   </form>
+</div>
   </body>
 </html>
+<script src="scripts/stylemain.js"></script>

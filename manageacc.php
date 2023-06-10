@@ -37,11 +37,32 @@ if(!empty($first_name) && !empty($last_name) && !empty($email) && !empty($phone)
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/signup.css?version1" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <link rel="stylesheet" href="styles/manageacc.css?version4" />
+    <link rel="stylesheet" href="styles/color.css?version1" />
     <title>Manage account</title>
 </head>
 <body>  
+<div class="sidebar">
+      <div class="profile" id="sticky">
+      <div class="namepart">
+        <h2>TaskMate</h2>
+      </div>
+      <ul>
+        <li><a href="main.php" onclick="toggle()"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+        <li><a href="newtask.php" onclick="toggle()"><i class="fa fa-plus" aria-hidden="true"></i></a></li>
+        <li><a class="selected_one" href="manageacc.php" onclick="toggle()"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+        <li><a href="front.html" onclick="toggle()"><i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
+      </ul>
+
+        <div class="toggle" onclick="toggle()"></div>
+    </div>
+</div>
+<h4><?php echo $user_data['FirstName'].' '.$user_data['LastName']; ?></h4>
   <div class="wrapper">
+  <div class="sidespace">
+      <label class="sidespace-text">TASKMATE</label>
+    </div>
   <div class="form-box">
     <h2>Account details</h2>
     <form method="post">
@@ -88,6 +109,6 @@ if(!empty($first_name) && !empty($last_name) && !empty($email) && !empty($phone)
     </form>
   </div>
   </div>
-
 </body>
 </html>
+<script src="scripts/stylemain.js"></script>

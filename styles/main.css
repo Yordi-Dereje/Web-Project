@@ -3,32 +3,296 @@
     text-decoration: none;
     margin: 0;
     padding: 0;
-    box-sizing: border-box; 
-}
-
-.sidebar {
-    background-color: #501B1D;    
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 20vw;
-    height: 100vh;
-    padding: 20px 0;
-    transition: all 0.5s ease;
-
-}
-
-.profile {
-   background-color: #501B1D;    
-   margin-bottom: 40px;
-    text-align: center;
+    box-sizing: border-box;
+    font-size: 20px;
 }
 
 body {
-    
-    display: flex;
-    color: black;
+    position: relative;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    position: relative;
+    width: 85vw;
+    height: 20vh;
+    margin: 0;
+    padding: 5px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: var(--primary-clr);
+    padding: 10px 0;
+    align-items: center;
+    border: 2px var(--primary-clr) solid;
+}
+
+.calendar {
+    position: relative;
+    width: 85vw;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #878895;
+    border-radius: 10px;
+    background-color: var(--primary-clr);
+}
+
+.calendar .goto-today {
+    width: 70%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 15px 20px;
+    color: white;
+}
+
+.filters {
+    background-color: var(--primary-clr);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 10px;
+    padding: 15px 20px;
+    color: white;
+}
+
+.filter-btn {
+    display: flex;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: transparent;
+    cursor: pointer;
+    color: white;
+}
+
+.filter-btn:hover {
+    color: var(--primary-clr);
+    background-color: white;
+}
+
+.calendar .goto-today .goto {
+    display: flex;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid white;
+    color: white;
+}
+
+select {
+    border: none;
+    background-color: transparent;
+    font-size: 100%;
+    width: 190px;
+    border-bottom: 2px white solid;
+    color: white;
+}
+
+
+.calendar .goto-today .goto input {
+    width: 100%;
+    height: 30px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 0 10px;
+    color: var(--primary-clr);
+    border-radius: 5px;
+}
+
+.calendar .goto-today button {
+    padding: 5px 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: transparent;
+    cursor: pointer;
+    color: var(--primary-clr);
+    color: white;
+}
+
+.calendar .goto-today button:hover {
+    color: var(--primary-clr);
+    background-color: white;
+}
+
+.calendar .goto-today .goto button {
+    border: none;
+    border-left: 1px solid var(--primary-clr);
+    border-radius: 0;
+}
+
+.today-date {
+    height: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: right;
+    padding: 25px;
+    text-transform: capitalize;
+}
+
+.events {
+    border: 2px var(--primary-clr) solid;
+    margin-top: 10px;
+    width: 85vw;
+    border-radius: 20px;
+    height: 72vh;
+    padding: 20px;
+    font-size: 1.2em;
+}
+
+.task-display {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 10px;
+}
+
+.task-display .title-div {
+    font-size: 110%;
+}
+
+.task-display-red {
+    border-bottom: 4px #FF6961 solid;
+    /* border-left: 4px #FF6961 solid; */
+}
+
+.task-display-yellow {
+    border-bottom: 4px #FDFD96 solid;
+    /* border-left: 4px #FDFD96 solid; */
+}
+
+.task-display-green {
+    border-bottom: 4px #77DD77 solid;
+    /* border-left: 4px #77DD77 solid; */
+}
+
+.stat-prog {
+    background-color: var(--primary-clr);
+    color: white;
+    border-radius: 25px;
+    padding: 9px;
+}
+
+.nec-btns {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.nec-btns button {
+    display: flex;
+    border-radius: 5px;
+    overflow: hidden;
+    border: none;
+    padding: 12px 15px;
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+    color: var(--primary-clr);
+}
+
+.nec-btns button:hover {
+    color: #fff;
+    background-color: var(--primary-clr);
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    gap: 40px;
+}
+
+
+.prem_button button {
+    outline: none;
+    border: solid 1px white;
+    background-color: var(--primary-clr);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    display: flex;
+    margin-left: 89%;
+}
+
+.prem_button button:hover {
+    border: solid 1px var(--primary-clr);
+    background-color: white;
+    color: var(--primary-clr);
+    cursor: pointer;
+}
+
+/* media queries */
+
+@media screen and (max-width: 900px) {
+    .container {
+        min-height: 20%;
+        flex-direction: column;
+        border-radius: 20px;
+        width: 90vw;
+        padding: 15px;
+    }
+
+    .calendar {
+        height: 75px;
+        width: 100%;
+        padding: 0 5px;
+    }
+
+    select {
+        width: 120px;
+    }
+
+    .events {
+        width: 90vw;
+    }
+
+    form {
+        gap: 30px;
+    }
+
+    .prem_button {
+        margin-right: 7%;
+    }
+}
+
+.sidebar {
+    background-color: var(--primary-clr);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 7vw;
+    height: 100vh;
+    padding: 10px 0;
+    transition: all 0.5s ease;
+}
+
+.profile {
+    background-color: var(--primary-clr);
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.whole {
+    display: flex;
+    color: var(--primary-clr);
+    min-height: 90vh;
 }
 
 .sidebar h2 {
@@ -38,21 +302,26 @@ body {
 
 .sidebar h4 {
     color: white;
-    margin-bottom: 80px;
+    margin: 80px 0;
 }
 
 .sidebar ul li a {
-    background-color: #501B1D;   
+    background-color: var(--primary-clr);
     display: block;
-    padding: 5vh 10%;
-    font-size: 16px;
+    padding: 7vh 10%;
+    font-size: 2em;
     position: relative;
     color: white;
 }
 
+.selected_one {
+    color: var(--primary-clr);
+    background-color: white;
+}
+
 .sidebar ul li a:hover,
 .sidebar ul li a:active {
-    color: black;
+    color: var(--primary-clr);
     background: #fff;
 }
 
@@ -65,224 +334,145 @@ body {
     position: fixed;
     top: 0;
     right: 0;
-    width: 77vw;
+    width: 90vw;
     height: 100%;
-    padding: 40px 0;
+    padding: 20px 0;
     overflow-y: auto;
 }
 
-.tasktable {
-    margin-top: 30px;
+html {
+    scroll-behavior: smooth;
 }
 
-.disp {
-    margin-top: 45px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 75vw;
-    height: 15vh;
-    border: 1px solid brown;
-    border-radius: 20px;
-    background-color: #501B1D;   
-    cursor: pointer; 
-}
-
-.disp:hover{
-  background-color: black;
-}
-
-.leftdiv .datediv {
-    padding-left: 10px;
-    font-size: 90%;
-    color: white;
-    padding-top: 5px;
-}
-
-.leftdiv .titlediv {
-    padding-left: 40px;
-    padding-top: 15px;
-    padding-bottom: 10px;
-    font-size: 160%;
-    color: white;
-}
-
-.leftdiv .categorydiv {
-    padding-left: 40px;
-    font-size: 90%;
-    color: white; 
-}
-
-.rightdiv .prioritydiv {
-    padding-left: 160px;
-    font-size: 100%;
-    color: white;
-    padding-top: 10px;
-    text-align: right;
-    padding-right: 10px;
-}
-
-.rightdiv .statusdiv {
-    padding-right: 140px;
-    font-size: 130%;
-    color: white;
-    padding-top: 10px;
-}
-
-.disp:hover {
-    scale: 1.01;
-}
-
-html{
-  scroll-behavior: smooth;
-}
-
-.toggle{
-  display: none;
-}
-
-@media(max-width: 800px){
-  .disp{
-    margin-top: 25px;
-    width: 90vw;
-    height: 18vh;
-    flex-direction: row;
-  }
-
-.leftdiv .categorydiv {
-    padding-left: 40px;
-}
-
-.rightdiv .prioritydiv {
-    padding-right: 10px;
-    font-size: 100%;
-    padding-top: 10px;
-    text-align: right;
-}
-
-.rightdiv .statusdiv {
-    padding-left: 20px;
-    font-size: 120%;
-    text-align: right;
-    padding-top: 10px;
+.toggle {
+    display: none;
 }
 
 
-.profile h2 {
-  margin-top: 15px;
-}
 
-.profile h4 {
-    color: white;
-    margin-bottom: 25px;
-}
+@media(max-width: 800px) {
 
-.mainpart{
-    width: 95vw;
-    padding: 100px 20px;
-    position: relative;
-
-  }
-  .profile{ 
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 40px 100px;
-    z-index: 1;
-    transition: all 0.5s ease; 
-  }
-
-  .sidebar{
-    background-color: transparent;
-  }
-  .toggle{
-    display: block;
-    position: relative;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-    padding-right: 30px;
-  }
-
-  .toggle:before{
-    content: '';
-    position: absolute;
-    top: 5px;
-    width: 100%;
-    height: 2px;
-    background: #000;
-    z-index: 1;
-    box-shadow: 0 10px 0 #000;
-    transition: 0.5s;
-  }
-  .toggle:after{
-    content: '';
-    position: absolute; 
-    bottom: 4px;
-    width: 100%;
-    height: 2px;
-    background: #000;
-    z-index: 1;
-    transition: 0.5s;
+    .profile h2 {
+        margin-top: 15px;
     }
-  
-  .sidebar .profile{
-     position: fixed;
-     padding: 5px 55px;
-  }
-  .profile ul{
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 90px;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    text-align: center;
-    overflow: auto;
-    background: #fff;
-    visibility: hidden;
-    opacity: 0;
+
+    .profile h4 {
+        color: white;
+        margin-bottom: 25px;
     }
-  
- .profile.active ul {
-    visibility: visible;
-    opacity: 1;
-    display: block;
-    padding-top: 10px ;
-  }
-.profile.active ul li a{
-    display: inline-block; 
-    font-size: 20px;
-  }
-.sidebar ul li a{
-  color: #501B1D;
-  padding: 4vh 45%;
-  background-color: white;
-  position: relative;
-  margin: 0; 
-  text-decoration: none;
-  color: #000;
-  letter-spacing: 2px;
-  font-weight: 300;
-  transition: 0.6s;
-}
 
-.sidebar ul li a:hover,
-.sidebar ul li a:active {
-    color: white;
-    background: #501B1D;
-}
+    .mainpart {
+        width: 95vw;
+        padding: 100px 20px;
+        position: relative;
 
-.sidebar ul li a:hover:before,
-.sidebar ul li a:active:before {
-    display: block;
-    background-color: white;
-}
+    }
+
+    .profile {
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px 100px;
+        z-index: 1;
+        transition: all 0.5s ease;
+    }
+
+    .sidebar {
+        background-color: transparent;
+    }
+
+    .toggle {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        padding-right: 30px;
+        color: white;
+    }
+
+    .toggle:before {
+        content: '';
+        position: absolute;
+        top: 5px;
+        width: 100%;
+        height: 2px;
+        background: black;
+        z-index: 1;
+        box-shadow: 0 10px 0 var(--primary-clr);
+        transition: 0.5s;
+    }
+
+    .toggle:after {
+        content: '';
+        position: absolute;
+        bottom: 4px;
+        width: 100%;
+        height: 2px;
+        background: black;
+        z-index: 1;
+        transition: 0.5s;
+    }
+
+    .sidebar .profile {
+        position: fixed;
+        padding: 5px 55px;
+    }
+
+    .profile ul {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 90px;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        text-align: center;
+        overflow: auto;
+        background: #fff;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .profile.active ul {
+        visibility: visible;
+        opacity: 1;
+        display: block;
+        padding-top: 10px;
+    }
+
+    .profile.active ul li a {
+        display: inline-block;
+        font-size: 1.2em;
+    }
+
+    .sidebar ul li a {
+        color: var(--primary-clr);
+        padding: 4vh 45%;
+        background-color: white;
+        position: relative;
+        margin: 0;
+        text-decoration: none;
+        color: var(--primary-clr);
+        letter-spacing: 2px;
+        font-weight: 300;
+        transition: 0.6s;
+    }
+
+    .sidebar ul li a:hover,
+    .sidebar ul li a:active {
+        color: white;
+        background: var(--primary-clr);
+    }
+
+    .sidebar ul li a:hover:before,
+    .sidebar ul li a:active:before {
+        display: block;
+        background-color: white;
+    }
 
 }
-

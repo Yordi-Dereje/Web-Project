@@ -50,29 +50,43 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/newTask.css?version2" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <link rel="stylesheet" href="styles/newTask.css?version7" />
+    <link rel="stylesheet" href="styles/color.css?version1" />
     <title>My website</title>
 </head>
 <body>
-<header>
-    <nav>
-      <h2>TASKMATE</h2>
-      <ul>
-        <li><a href="main.php">Home</a></li>
-      </ul>
-    </nav>
-  </header>
 
+<div class="sidebar">
+      <div class="profile" id="sticky">
+      <div class="namepart">
+        <h2>TaskMate</h2>
+      </div>
+      <ul>
+        <li><a href="main.php" onclick="toggle()"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+        <li><a href="newtask.php" onclick="toggle()"><i class="fa fa-plus" aria-hidden="true"></i></a></li>
+        <li><a href="manageacc.php" onclick="toggle()"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+        <li><a href="front.html" onclick="toggle()"><i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
+      </ul>
+
+        <div class="toggle" onclick="toggle()"></div>
+    </div>
+</div>
+
+<h4><?php echo $user_data['FirstName'].' '.$user_data['LastName']; ?></h4>
   <div class="wrapper">
+  <div class="sidespace">
+      <label class="sidespace-text">TASKMATE</label>
+    </div>
     <div class="form-box">
       <h2> Details </h2>
       <form method="post">
         <div class="input-box">
-          <input  type="text" required name="title" value="<?php echo $task_data['Title']; ?>">
+          <input type="text" required name="title" value="<?php echo $task_data['Title']; ?>">
           <label for="title">Title</label>
         </div>
         <div class="input-box">
-          <input  type="text" required name="description" value="<?php echo $task_data['Description']; ?>">
+          <input type="text" required name="description" value="<?php echo $task_data['Description']; ?>">
           <label for="description">Description</label>
         </div>
 
@@ -113,3 +127,4 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
   </div>
   </body>
 </html>
+<script src="scripts/stylemain.js"></script>
