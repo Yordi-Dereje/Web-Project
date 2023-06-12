@@ -64,7 +64,7 @@ if (isset($_POST['checkout']) && isset($_POST['cart_item_id'])) {
                 "tx_ref" => $shop_order_id,
                 "callback_url" => "https://webhook.site/077164d6-29cb-40df-ba29-8a00e59a7e60",
                 "return_url" => "http://localhost/jimla/template/purchase_info.php?ref_id=$shop_order_id",
-                "customization[title]" => "Payment from Jimla Online Shop",
+                "customization[title]" => "Payment from TaskMate Premium user",
                 // "customization[description]" => "I love online payments.",
                 // "customization[logo]" => "../assets/image/logo/png/logo-color2.png"
             ]
@@ -98,14 +98,14 @@ if (isset($_POST['checkout']) && isset($_POST['cart_item_id'])) {
             if ($response->status == "success") {
                 header("Location: " . $response->data->checkout_url);
             } else {
-                header("Location: ../template/cart.php?error=4");
+                header("Location: ./error.html?error=4");
             }
         } else {
-            header("Location: ../template/cart.php?error=2");
+            header("Location: ./error.html?error=2");
         }
     } else {
         echo "not checkout";
     }
 } else {
-    header("Location: ../template/cart.php?error=3");
+    header("Location: ./error.html?error=3");
 }

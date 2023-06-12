@@ -1,8 +1,8 @@
 <?php
   session_start();
 
-  include("db/connection.php");
-  include("db/functions.php");  
+  include("../db/connection.php");
+  include("../db/functions.php");  
 
   $user_data = check_login($con);
 
@@ -18,7 +18,7 @@
           "last_name" =>$user_data ['LastName'],
           "tx_ref" => rand(10,100000),
           "callback_url" =>  "https://webhook.site/077164d6-29cb-40df-ba29-8a00e59a7e60",
-          "return_url" => "http://localhost/Web-Project/main_premium.php",
+          "return_url" => "http://localhost/Web-Project/mainpremium.php",
           "customization[title]" => "Payment for premium membership for TaskMate",
       ]
   );

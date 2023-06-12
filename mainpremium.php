@@ -14,7 +14,7 @@ $user_data = check_login($con);
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
-<link rel="stylesheet" href="styles/main.css?version29" />
+<link rel="stylesheet" href="styles/mainprem.css?version1" />
 <link rel="stylesheet" href="styles/color.css?version2" />
 
 <title>Home page</title>
@@ -28,6 +28,7 @@ $user_data = check_login($con);
 </div>
 <ul>
 <li><a href="main.php" class="selected_one" onclick="toggle()"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+<li><a href="#"><button>Theme</button></a></li>
 <li><a href="newtask.php" onclick="toggle()"><i class="fa fa-plus" aria-hidden="true"></i></a></li>
 <li><a href="manageacc.php" onclick="toggle()"><i class="fa fa-user" aria-hidden="true"></i></a></li>
 <li><a href="front.html" onclick="toggle()"><i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
@@ -52,8 +53,9 @@ $user_data = check_login($con);
 </form>
 
 </div> 
-<div><h3><?php echo $user_data['FirstName'].' '.$user_data['LastName']; ?></h3></div>
-
+<div class="today-date">
+<div class="event-date"><?php echo date('l M, d Y'); ?></div>
+</div>
 </div>
 <div class="filters">
 <form method="post" >
@@ -75,11 +77,7 @@ $user_data = check_login($con);
   </div>
   <div><button class="filter-btn" name="filter-btn" type="submit" >Filter</button></div>
 </form>
-<div class="today-date">
-  
-<div class="event-date"><?php echo date('l M, d Y'); ?></div>
-</div>
-
+<div><h3><?php echo $user_data['FirstName'].' '.$user_data['LastName']; ?></h3></div>
 
 </div>
 
@@ -126,10 +124,11 @@ $user_data = check_login($con);
 
       <div class="title-div"><?= $row2['Title']; ?></div>
       <div class="nec-btns">
-        <div class="stat-prog" onclick="location.href='editstat.php?id=<?= $row2['TaskID']; ?>';"> <?= $row2['Sdes']; ?></div>  
-        <div class="edit-btn"><button onclick="location.href='edittask.php?id=<?= $row2['TaskID']; ?>';"><i class="fa-solid fa-pen"></i></button></div>
-        <div class="del-btn"><button onclick="location.href='deletetask.php?id=<?= $row2['TaskID']; ?>';"><i class="fa fa-trash" aria-hidden="true"></i></button></div>
-      </div>
+      <div class="stat-prog"><?= $row2['Sdes']; ?></div>  
+      <div class="edit-btn"><button onclick="location.href='edittask.php?id=<?= $row2['TaskID']; ?>';"><i class="fa-solid fa-pen"></i></button></div>
+      
+      <div class="del-btn"><button onclick="location.href='deletetask.php?id=<?= $row2['TaskID']; ?>';"><i class="fa fa-trash" aria-hidden="true"></i></button></div>
+    </div>
     </div>
     <?php
     }
@@ -171,7 +170,7 @@ $user_data = check_login($con);
     
       <div class="title-div"><?= $row3['Title']; ?></div>
       <div class="nec-btns">
-        <div class="stat-prog" onclick="location.href='editstat.php?id=<?= $row2['TaskID']; ?>';"><?= $row3['Sdes']; ?></div>
+        <div class="stat-prog"><?= $row3['Sdes']; ?></div>
         <div class="edit-btn"><button onclick="location.href='edittask.php?id=<?= $row3['TaskID']; ?>';"><i class="fa-solid fa-pen"></i></button></div>
         <div class="del-btn"><button onclick="location.href='deletetask.php?id=<?= $row3['TaskID']; ?>';"><i class="fa fa-trash" aria-hidden="true"></i></button></div>
       </div>
@@ -205,7 +204,7 @@ $user_data = check_login($con);
       
     <div class="title-div"><?= $row2['Title']; ?></div>
     <div class="nec-btns">
-      <div class="stat-prog" onclick="location.href='editstat.php?id=<?= $row2['TaskID']; ?>';"><?= $row2['Sdes']; ?></div>
+      <div class="stat-prog"><?= $row2['Sdes']; ?></div>
       <div class="edit-btn"><button onclick="location.href='edittask.php?id=<?= $row2['TaskID']; ?>';"><i class="fa-solid fa-pen"></i></button></div>
       <div class="del-btn"><button onclick="location.href='deletetask.php?id=<?= $row2['TaskID']; ?>';"><i class="fa fa-trash" aria-hidden="true"></i></button></div>
     </div>
@@ -220,10 +219,8 @@ $user_data = check_login($con);
   ?>
 </div>
 </div>
-<button class="rem">remind me</button>
 </div>
 </body>
 </html>
 <script src="scripts/stylemain.js"></script>
-<script src="Notification/script.js"></script>
 <!-- <script src="script.js"></script> -->
