@@ -102,7 +102,7 @@ $user_data = check_login($con);
         eventdate.innerHTML = value;
         alert(value);
       </script>
-    <?php $query = "select * from Tasks join Status_table on Tasks.Status=Status_table.Sid join Priority_table on Tasks.Priority=Priority_table.Pid where UserID = '$id' and Date = '$ndate' order by Status, Priority desc";
+    <?php $query = "select * from tasks join status_table on tasks.Status=status_table.Sid join priority_table on tasks.Priority=priority_table.Pid where UserID = '$id' and Date = '$ndate' order by Status, Priority desc";
     $run_query = mysqli_query($con, $query);
     if(mysqli_num_rows($run_query) > 0){
       foreach($run_query as $row2){
@@ -151,7 +151,7 @@ $user_data = check_login($con);
       </script>
     <?php 
     
-    $qu = "select * from Tasks join Status_table on Tasks.Status=Status_table.Sid join Priority_table on Tasks.Priority=Priority_table.Pid where UserID = '$id' and Date = '$currentDate' and Priority = '$pri' and Status = '$stat' order by Status, Priority desc";
+    $qu = "select * from tasks join status_table on tasks.Status=status_table.Sid join priority_table on tasks.Priority=priority_table.Pid where UserID = '$id' and Date = '$currentDate' and Priority = '$pri' and Status = '$stat' order by Status, Priority desc";
     $run_qu = mysqli_query($con, $qu);
     if(mysqli_num_rows($run_qu) > 0){
       foreach($run_qu as $row3){
@@ -185,7 +185,7 @@ $user_data = check_login($con);
 
   
   if($bool == false){
-  $query2 = "select * from Tasks join Status_table on Tasks.Status=Status_table.Sid join Priority_table on Tasks.Priority=Priority_table.Pid where UserID = '$id' and Date='$currentDate' order by Status, Priority desc";
+  $query2 = "select * from tasks join status_table on tasks.Status=status_table.Sid join priority_table on tasks.Priority=priority_table.Pid where UserID = '$id' and Date='$currentDate' order by Status, Priority desc";
   $run_query = mysqli_query($con, $query2);
   if(mysqli_num_rows($run_query) > 0){
   foreach($run_query as $row2){

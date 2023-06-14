@@ -16,7 +16,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
   $priority = (int)$_POST['priority'];
 
     if(!empty($title) && !empty($description)){
-        $query = "insert into Tasks (UserID, Title, Description, Category, Date, Status, Priority) values ('$id', '$title', '$description', '$category', '$date', '$status', '$priority')";
+        $query = "insert into tasks (UserID, Title, Description, Category, Date, Status, Priority) values ('$id', '$title', '$description', '$category', '$date', '$status', '$priority')";
         mysqli_query($con, $query);
         header("Location: main.php");
         die;
@@ -39,6 +39,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
     <link rel="stylesheet" href="styles/newTask.css?version15" />
     <link rel="stylesheet" href="styles/color.css?version1" />
+    <link rel="stylesheet" href="themeChanger.css">
     <title>My website</title>
 </head>
 <body>
@@ -104,3 +105,4 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
   </body>
 </html>
 <script src="scripts/stylemain.js"></script>
+<script src="theme.js"></script>

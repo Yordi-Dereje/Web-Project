@@ -17,7 +17,7 @@ $password = $_POST['password'];
 $sec_q = $_POST['secQ'];
 $sec_a = $_POST['secA'];
 if(!empty($first_name) && !empty($last_name) && !empty($email) && !empty($phone) && !empty($user_name) && !empty($password) && !empty($sec_q) && !empty($sec_a)){
-		$query = "update Users set FirstName='$first_name', LastName='$last_name', Email='$email', Phone='$phone', UserName='$user_name', Password='$password', SecQuestion='$sec_q', SecAnswer='$sec_a' where id='$id';";
+		$query = "update users set FirstName='$first_name', LastName='$last_name', Email='$email', Phone='$phone', UserName='$user_name', Password='$password', SecQuestion='$sec_q', SecAnswer='$sec_a' where id='$id';";
 	  mysqli_query($con, $query);
 		header("Location: main.php");
 		die;
@@ -40,6 +40,7 @@ if(!empty($first_name) && !empty($last_name) && !empty($email) && !empty($phone)
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
     <link rel="stylesheet" href="styles/manageacc.css?version9" />
     <link rel="stylesheet" href="styles/color.css?version1" />
+    <link rel="stylesheet" href="themeChanger.css">
     <title>Manage account</title>
 </head>
 <body>  
@@ -111,3 +112,4 @@ if(!empty($first_name) && !empty($last_name) && !empty($email) && !empty($phone)
 </body>
 </html>
 <script src="scripts/stylemain.js"></script>
+<script src="theme.js"></script>

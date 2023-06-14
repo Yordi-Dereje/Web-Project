@@ -13,7 +13,7 @@ if($_SERVER['REQUEST_METHOD'] == 'GET'){
     }
 
     $tid = $_GET["id"];
-    $query0 = "select * from Tasks where TaskID='$tid' limit 1";
+    $query0 = "select * from tasks where TaskID='$tid' limit 1";
     $result0 = mysqli_query($con, $query0);
 
     if($result0 && mysqli_num_rows($result0) > 0){
@@ -21,15 +21,15 @@ if($_SERVER['REQUEST_METHOD'] == 'GET'){
     }
 
     if($task_data['Status'] == 1){
-        $query = "update Tasks set Status='2' where TaskID='$tid'";
+        $query = "update tasks set Status='2' where TaskID='$tid'";
         mysqli_query($con, $query);
     }
     else if($task_data['Status'] == 2){
-        $query = "update Tasks set Status='3' where TaskID='$tid'";
+        $query = "update tasks set Status='3' where TaskID='$tid'";
         mysqli_query($con, $query);
     }
     else if($task_data['Status'] == 3){
-        $query = "update Tasks set Status='1' where TaskID='$tid'";
+        $query = "update tasks set Status='1' where TaskID='$tid'";
         mysqli_query($con, $query);
     }   
 }

@@ -13,7 +13,7 @@ if($_SERVER['REQUEST_METHOD'] == 'GET'){
     }
 
     $tid = $_GET["id"];
-    $query0 = "select * from Tasks where TaskID='$tid' limit 1";
+    $query0 = "select * from tasks where TaskID='$tid' limit 1";
     $result0 = mysqli_query($con, $query0);
 
     if($result0 && mysqli_num_rows($result0) > 0){
@@ -32,7 +32,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     $priority = (int)$_POST['priority'];
   
       if(!empty($title)){
-          $query = "update Tasks set Title='$title', Description='$description', Category='$category', Date='$date', Status='$status', Priority='$priority' where TaskID='$tid'";
+          $query = "update tasks set Title='$title', Description='$description', Category='$category', Date='$date', Status='$status', Priority='$priority' where TaskID='$tid'";
           mysqli_query($con, $query);
           header("Location: main.php");
           die;
@@ -53,6 +53,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
     <link rel="stylesheet" href="styles/newTask.css?version8" />
     <link rel="stylesheet" href="styles/color.css?version1" />
+    <link rel="stylesheet" href="themeChanger.css">
     <title>My website</title>
 </head>
 <body>
@@ -127,3 +128,4 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
   </body>
 </html>
 <script src="scripts/stylemain.js"></script>
+<script src="theme.js"></script>

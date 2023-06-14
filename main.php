@@ -16,10 +16,30 @@ $user_data = check_login($con);
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
 <link rel="stylesheet" href="styles/main.css?version29" />
 <link rel="stylesheet" href="styles/color.css?version2" />
-
+<link rel="stylesheet" href="themeChanger.css">
 <title>Home page</title>
 </head>
 <body>
+  <a href="theme.html">theme changer</a>
+<!-- <form class="color-picker" action="">
+        <fieldset>
+          <legend class="visually-hidden">Pick a color scheme</legend>
+          <label for="light" class="visually-hidden">Light</label>
+          <input type="radio" name="theme" id="light" checked>
+      
+          <label for="pink" class="visually-hidden">Pink theme</label>
+          <input type="radio" id="pink" name="theme">
+      
+          <label for="blue" class="visually-hidden">Blue theme</label>
+          <input type="radio" id="blue" name="theme">
+      
+          <label for="green" class="visually-hidden">Green theme</label>
+          <input type="radio" id="green" name="theme">
+      
+          <label for="dark" class="visually-hidden">Dark theme</label>
+          <input type="radio" id="dark" name="theme">
+        </fieldset>
+      </form> -->
 <div class="whole">
 <div class="sidebar">
 <div class="profile" id="sticky">
@@ -104,7 +124,7 @@ $user_data = check_login($con);
         eventdate.innerHTML = value;
         alert(value);
       </script>
-    <?php $query = "select * from Tasks join Status_table on Tasks.Status=Status_table.Sid join Priority_table on Tasks.Priority=Priority_table.Pid where UserID = '$id' and Date = '$ndate' order by Status, Priority desc";
+    <?php $query = "select * from tasks join status_table on tasks.Status=status_table.Sid join priority_table on tasks.Priority=priority_table.Pid where UserID = '$id' and Date = '$ndate' order by Status, Priority desc";
     $run_query = mysqli_query($con, $query);
     if(mysqli_num_rows($run_query) > 0){
       foreach($run_query as $row2){
@@ -152,7 +172,7 @@ $user_data = check_login($con);
       </script>
     <?php 
     
-    $qu = "select * from Tasks join Status_table on Tasks.Status=Status_table.Sid join Priority_table on Tasks.Priority=Priority_table.Pid where UserID = '$id' and Date = '$currentDate' and Priority = '$pri' and Status = '$stat' order by Status, Priority desc";
+    $qu = "select * from tasks join status_table on tasks.Status=status_table.Sid join priority_table on tasks.Priority=priority_table.Pid where UserID = '$id' and Date = '$currentDate' and Priority = '$pri' and Status = '$stat' order by Status, Priority desc";
     $run_qu = mysqli_query($con, $qu);
     if(mysqli_num_rows($run_qu) > 0){
       foreach($run_qu as $row3){
@@ -186,7 +206,7 @@ $user_data = check_login($con);
 
   
   if($bool == false){
-  $query2 = "select * from Tasks join Status_table on Tasks.Status=Status_table.Sid join Priority_table on Tasks.Priority=Priority_table.Pid where UserID = '$id' and Date='$currentDate' order by Status, Priority desc";
+  $query2 = "select * from tasks join status_table on tasks.Status=status_table.Sid join priority_table on tasks.Priority=priority_table.Pid where UserID = '$id' and Date='$currentDate' order by Status, Priority desc";
   $run_query = mysqli_query($con, $query2);
   if(mysqli_num_rows($run_query) > 0){
   foreach($run_query as $row2){
@@ -226,4 +246,5 @@ $user_data = check_login($con);
 </html>
 <script src="scripts/stylemain.js"></script>
 <script src="Notification/script.js"></script>
+<script src="theme.js"></script>
 <!-- <script src="script.js"></script> -->
