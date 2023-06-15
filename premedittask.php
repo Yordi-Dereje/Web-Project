@@ -8,7 +8,7 @@ $user_data = check_login($con);
 
 if($_SERVER['REQUEST_METHOD'] == 'GET'){
     if(!isset($_GET["id"])){
-      header("Location: main.php");
+      header("Location: mainpremium.php");
       die;
     }
 
@@ -34,7 +34,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
       if(!empty($title)){
           $query = "update tasks set Title='$title', Description='$description', Category='$category', Date='$date', Status='$status', Priority='$priority' where TaskID='$tid'";
           mysqli_query($con, $query);
-          header("Location: main.php");
+          header("Location: mainpremium.php");
           die;
       }
       else{
@@ -51,8 +51,9 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
-    <link rel="stylesheet" href="styles/newTask.css?version8" />
-    <link rel="stylesheet" href="styles/color.css?version1" />
+    <link rel="stylesheet" href="styles/premnew.css" />
+    <!-- <link rel="stylesheet" href="styles/color.css?version1" /> -->
+    <link rel="stylesheet" href="themeChanger.css?version1" />
     <title>My website</title>
 </head>
 <body>
@@ -63,9 +64,9 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
         <h2>TaskMate</h2>
       </div>
       <ul>
-        <li><a href="main.php" onclick="toggle()"><i class="fa fa-home" aria-hidden="true"></i></a></li>
-        <li><a href="newtask.php" onclick="toggle()"><i class="fa fa-plus" aria-hidden="true"></i></a></li>
-        <li><a href="manageacc.php" onclick="toggle()"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+        <li><a href="mainpremium.php" class="selected_one" onclick="toggle()"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+        <li><a href="premnewtask.php" onclick="toggle()"><i class="fa fa-plus" aria-hidden="true"></i></a></li>
+        <li><a href="premmanageacc.php" onclick="toggle()"><i class="fa fa-user" aria-hidden="true"></i></a></li>
         <li><a href="front.html" onclick="toggle()"><i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
       </ul>
 

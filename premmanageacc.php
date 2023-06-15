@@ -19,7 +19,7 @@ $sec_a = $_POST['secA'];
 if(!empty($first_name) && !empty($last_name) && !empty($email) && !empty($phone) && !empty($user_name) && !empty($password) && !empty($sec_q) && !empty($sec_a)){
 		$query = "update users set FirstName='$first_name', LastName='$last_name', Email='$email', Phone='$phone', UserName='$user_name', Password='$password', SecQuestion='$sec_q', SecAnswer='$sec_a' where id='$id';";
 	  mysqli_query($con, $query);
-		header("Location: main.php");
+		header("Location: mainpremium.php");
 		die;
 	}
 	else{
@@ -38,8 +38,9 @@ if(!empty($first_name) && !empty($last_name) && !empty($email) && !empty($phone)
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
-    <link rel="stylesheet" href="styles/manageacc.css?version9" />
-    <link rel="stylesheet" href="styles/color.css?version1" />
+    <link rel="stylesheet" href="styles/premanage.css" />
+    <!-- <link rel="stylesheet" href="styles/color.css?version1" /> -->
+    <link rel="stylesheet" href="themeChanger.css?version1 "/>
     <title>Manage account</title>
 </head>
 <body>  
@@ -49,9 +50,9 @@ if(!empty($first_name) && !empty($last_name) && !empty($email) && !empty($phone)
         <h2>TaskMate</h2>
       </div>
       <ul>
-        <li><a href="main.php" onclick="toggle()"><i class="fa fa-home" aria-hidden="true"></i></a></li>
-        <li><a href="newtask.php" onclick="toggle()"><i class="fa fa-plus" aria-hidden="true"></i></a></li>
-        <li><a class="selected_one" href="manageacc.php" onclick="toggle()"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+        <li><a href="mainpremium.php" class="selected_one" onclick="toggle()"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+        <li><a href="premnewtask.php" onclick="toggle()"><i class="fa fa-plus" aria-hidden="true"></i></a></li>
+        <li><a href="premmanageacc.php" onclick="toggle()"><i class="fa fa-user" aria-hidden="true"></i></a></li>
         <li><a href="front.html" onclick="toggle()"><i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
       </ul>
 

@@ -15,6 +15,10 @@ body {
     align-items: center;
 }
 
+.toppart{
+    display: flex;
+}
+
 .container {
     position: relative;
     width: 85vw;
@@ -25,10 +29,10 @@ body {
     display: flex;
     flex-direction: column;
     border-radius: 10px;
-    background-color: var(--primary-clr);
+    background-color: var( --clr-body-bg);
     padding: 10px 0;
     align-items: center;
-    border: 2px var(--primary-clr) solid;
+    border: 2px var( --clr-body-bg) solid;
 }
 
 .cal {
@@ -40,7 +44,7 @@ body {
     align-items: center;
     color: white;
     border-radius: 10px;
-    background-color: var(--primary-clr);
+    background-color: var( --clr-body-bg);
 }
 
 .cal .goto-today {
@@ -55,7 +59,7 @@ body {
 }
 
 .filters {
-    background-color: var(--primary-clr);
+    background-color: var( --clr-body-bg);
     border-radius: 10px;
     display: flex;
     flex-direction: row;
@@ -79,7 +83,7 @@ body {
 }
 
 .filter-btn:hover {
-    color: var(--primary-clr);
+    color: var( --clr-body-bg);
     background-color: white;
 }
 
@@ -110,7 +114,7 @@ select {
     border: none;
     border-radius: 5px;
     padding: 0 10px;
-    color: var(--primary-clr);
+    color: var( --clr-body-bg);
     border-radius: 5px;
 }
 
@@ -120,18 +124,18 @@ select {
     border-radius: 5px;
     background-color: transparent;
     cursor: pointer;
-    color: var(--primary-clr);
+    color: var( --clr-body-bg);
     color: white;
 }
 
 .cal .goto-today button:hover {
-    color: var(--primary-clr);
+    color: var( --clr-body-bg);
     background-color: white;
 }
 
 .cal .goto-today .goto button {
     border: none;
-    border-left: 1px solid var(--primary-clr);
+    border-left: 1px solid var( --clr-body-bg);
     border-radius: 0;
 }
 
@@ -148,7 +152,7 @@ select {
 }
 
 .maindisp {
-    border: 2px var(--primary-clr) solid;
+    border: 2px var( --clr-body-bg) solid;
     margin-top: 10px;
     width: 85vw;
     border-radius: 20px;
@@ -161,7 +165,7 @@ select {
 }
 
 .calendar {
-    border: 2px solid var(--primary-clr);
+    border: 2px solid var(--clr-body-bg);
     border-radius: 10px;
 }
 
@@ -197,11 +201,19 @@ select {
     /* border-left: 4px #77DD77 solid; */
 }
 
-.stat-prog {
-    background-color: var(--primary-clr);
+.stat {
+    background-color: var( --clr-body-bg);
     color: white;
     border-radius: 25px;
     padding: 10px 20px;
+}
+
+.stat:hover {
+    background-color: var( --clr-bg);
+    color: var( --clr-body-bg);
+    border-radius: 25px;
+    padding: 10px 20px;
+    cursor: pointer;
 }
 
 .nec-btns {
@@ -210,7 +222,8 @@ select {
     gap: 20px;
 }
 
-.nec-btns button {
+.edit-btn button,
+.del-btn button {
     display: flex;
     border-radius: 5px;
     overflow: hidden;
@@ -219,13 +232,14 @@ select {
     border-radius: 50%;
     background-color: transparent;
     cursor: pointer;
-    color: var(--primary-clr);
+    color: var(--clr-body-bg);
 
 }
 
-.nec-btns button:hover {
-    color: #fff;
-    background-color: var(--primary-clr);
+.edit-btn button:hover,
+.del-btn button:hover {
+    color: var(--clr-bg);
+    background-color: var(--clr-body-bg);
     transition: width 0.2s ease-in-out, height 0.2s ease-in-out;
 }
 
@@ -250,7 +264,7 @@ form {
 .prem_button button {
     outline: none;
     border: solid 1px white;
-    background-color: var(--primary-clr);
+    background-color: var( --clr-body-bg);
     color: white;
     padding: 5px 10px;
     border-radius: 8px;
@@ -264,9 +278,9 @@ form {
 }
 
 .prem_button button:hover {
-    border: solid 1px var(--primary-clr);
+    border: solid 1px var( --clr-body-bg);
     background-color: white;
-    color: var(--primary-clr);
+    color: var( --clr-body-bg);
     cursor: pointer;
 
 }
@@ -306,7 +320,7 @@ form {
 }
 
 .sidebar {
-    background-color: var(--primary-clr);
+    background-color: var( --clr-body-bg);
     position: fixed;
     top: 0;
     left: 0;
@@ -314,17 +328,18 @@ form {
     height: 100vh;
     padding: 10px 0;
     transition: all 0.5s ease;
+    font-size: 14px;
 }
 
 .profile {
-    background-color: var(--primary-clr);
+    background-color: var( --clr-body-bg);
     margin-bottom: 40px;
     text-align: center;
 }
 
 .whole {
     display: flex;
-    color: var(--primary-clr);
+    color: var( --clr-body-bg);
     min-height: 90vh;
 }
 
@@ -339,7 +354,7 @@ form {
 }
 
 .sidebar ul li a {
-    background-color: var(--primary-clr);
+    background-color: var( --clr-body-bg);
     display: block;
     padding: 5vh 10%;
     font-size: 2em;
@@ -357,23 +372,21 @@ form {
 }
 
 .sidebar ul li a button:hover {
-    color: var(--primary-clr);
+    color: var( --clr-body-bg);
+    background:  var( --clr-bg);
 }
 
-.selected_one {
-    color: var(--primary-clr);
-    background-color: white;
-}
 
 .sidebar ul li a:hover,
 .sidebar ul li a:active {
-    color: var(--primary-clr);
-    background: #fff;
+    color: var( --clr-body-bg);
+    background:  var( --clr-bg);
 }
 
 .sidebar ul li a:hover:before,
 .sidebar ul li a:active:before {
     display: block;
+    background:  var( --clr-bg);
 }
 
 .mainpart {
@@ -462,7 +475,7 @@ html {
         height: 2px;
         background: white;
         z-index: 1;
-        box-shadow: 0 10px 0 var(--primary-clr);
+        box-shadow: 0 10px 0 var( --clr-body-bg);
         transition: 0.5s;
     }
 
@@ -511,13 +524,13 @@ html {
     }
 
     .sidebar ul li a {
-        color: var(--primary-clr);
+        color: var( --clr-body-bg);
         padding: 4vh 45%;
         background-color: white;
         position: relative;
         margin: 0;
         text-decoration: none;
-        color: var(--primary-clr);
+        color: var( --clr-body-bg);
         letter-spacing: 2px;
         font-weight: 300;
         transition: 0.6s;
@@ -526,13 +539,13 @@ html {
     .sidebar ul li a:hover,
     .sidebar ul li a:active {
         color: white;
-        background: var(--primary-clr);
+        background: var( --clr-body-bg);
     }
 
     .sidebar ul li a:hover:before,
     .sidebar ul li a:active:before {
         display: block;
-        background-color: white;
+        background:  var( --clr-bg);
     }
 
 }

@@ -15,7 +15,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
   $sec_a = $_POST['secA'];
 
 	if(!empty($first_name) && !empty($last_name) && !empty($email) && !empty($phone) && !empty($user_name) && !empty($password) && !empty($sec_q) && !empty($sec_a)){
-		$query = "insert into Users (FirstName, LastName, Email, Phone, UserName, Password, SecQuestion, SecAnswer) values ('$first_name', '$last_name', '$email', '$phone', '$user_name', '$password', '$sec_q', '$sec_a')";
+		$query = "insert into users (FirstName, LastName, Email, Phone, UserName, Password, SecQuestion, SecAnswer) values ('$first_name', '$last_name', '$email', '$phone', '$user_name', '$password', '$sec_q', '$sec_a')";
 	  mysqli_query($con, $query);
 		header("Location: login.php");
 		die;

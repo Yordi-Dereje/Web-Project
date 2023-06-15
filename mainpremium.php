@@ -14,12 +14,13 @@ $user_data = check_login($con);
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
-<link rel="stylesheet" href="styles/mainprem.css?version1" />
-<link rel="stylesheet" href="styles/color.css?version2" />
-
+<link rel="stylesheet" href="styles/mainprem.css?version7" />
+<!-- <link rel="stylesheet" href="styles/color.css?version4" /> -->
+<link rel="stylesheet" href="themeChanger.css?version3 "/>
 <title>Home page</title>
 </head>
 <body>
+
 <div class="whole">
 <div class="sidebar">
 <div class="profile" id="sticky">
@@ -27,10 +28,9 @@ $user_data = check_login($con);
 <h4>TaskMate</h4>
 </div>
 <ul>
-<li><a href="main.php" class="selected_one" onclick="toggle()"><i class="fa fa-home" aria-hidden="true"></i></a></li>
-<li><a href="#"><button>Theme</button></a></li>
-<li><a href="newtask.php" onclick="toggle()"><i class="fa fa-plus" aria-hidden="true"></i></a></li>
-<li><a href="manageacc.php" onclick="toggle()"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+<li><a href="mainpremium.php" class="selected_one" onclick="toggle()"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+<li><a href="premnewtask.php" onclick="toggle()"><i class="fa fa-plus" aria-hidden="true"></i></a></li>
+<li><a href="premmanageacc.php" onclick="toggle()"><i class="fa fa-user" aria-hidden="true"></i></a></li>
 <li><a href="front.html" onclick="toggle()"><i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
 </ul>
 
@@ -38,12 +38,35 @@ $user_data = check_login($con);
 </div>
 
 <div class="mainpart" id="mainpart">
-  <div onclick="location.href='./Payment/premium.php'" class="prem_button"><button>premium</button></div>
+  <div class="toppart">
+    <div class="colorform">
+    <form class="color-picker" action="">
+        <fieldset>
+          <legend class="visually-hidden">Pick a color scheme</legend>
+          <label for="light" class="visually-hidden">Light</label>
+          <input type="radio" name="theme" id="light" checked>
+      
+          <label for="pink" class="visually-hidden">Pink theme</label>
+          <input type="radio" id="pink" name="theme">
+      
+          <label for="blue" class="visually-hidden">Blue theme</label>
+          <input type="radio" id="blue" name="theme">
+      
+          <label for="green" class="visually-hidden">Green theme</label>
+          <input type="radio" id="green" name="theme">
+      
+          <label for="dark" class="visually-hidden">Dark theme</label>
+          <input type="radio" id="dark" name="theme">
+        </fieldset>
+      </form>
+</div>
+
+  </div>
 <div class="container">
 <div class="cal">
 <div class="goto-today">
 <div>
-<button class="today-btn" onclick="location.href='main.php'">Today</button>
+<button class="today-btn" onclick="location.href='mainpremium.php'">Today</button>
 </div>
 <form method="post">
   <div class="goto">
@@ -67,7 +90,7 @@ $user_data = check_login($con);
       <option value="3"> High</option>
     </select> 
   </div>
-  <div class="stat">
+  <div class="statt">
     <select required name="status" id="status">
       <option value="" disabled selected hidden>Status</option>
       <option value="1" >pending</option>
@@ -96,37 +119,42 @@ $user_data = check_login($con);
     $t2 = date('l M, d Y',$t1);
     $bool = true;
     ?>
-      <script>
-        var value = " <?= $t2 ?>";
-        const eventdate = document.querySelector(".event-date");
-        eventdate.innerHTML = value;
-        alert(value);
-      </script>
-    <?php $query = "select * from Tasks join Status_table on Tasks.Status=Status_table.Sid join Priority_table on Tasks.Priority=Priority_table.Pid where UserID = '$id' and Date = '$ndate' order by Status, Priority desc";
+      
+    <?php $query = "select * from tasks where UserID = '$id' and Date = '$ndate' order by Status, Priority desc";
     $run_query = mysqli_query($con, $query);
     if(mysqli_num_rows($run_query) > 0){
       foreach($run_query as $row2){
         $class = 'task-display';
-        if($row2['Pid'] == 1){
+        if($row2['Priority'] == 1){
           $class = 'task-display-green';
         }
-        else if($row2['Pid'] == 2){
+        else if($row2['Priority'] == 2){
           $class = 'task-display-yellow';
         }
-        else if($row2['Pid'] == 3){
+        else if($row2['Priority'] == 3){
           $class = 'task-display-red';
         }
         else{
           $class = 'task-display';
         }
+
+        $sdes = 'pending';
+    if($row2['Status'] == 1){
+      $sdes = 'Pending';
+    }
+    else if($row2['Status'] == 2){
+      $sdes = 'On progress';
+    }
+    else if($row2['Status'] == 3){
+      $sdes = 'Completed';
+    }
       ?>
     <div class="task-display <?php echo $class; ?>" >
 
       <div class="title-div"><?= $row2['Title']; ?></div>
       <div class="nec-btns">
-      <div class="stat-prog"><?= $row2['Sdes']; ?></div>  
-      <div class="edit-btn"><button onclick="location.href='edittask.php?id=<?= $row2['TaskID']; ?>';"><i class="fa-solid fa-pen"></i></button></div>
-      
+      <div class="stat" onclick="location.href='peditstat.php?id=<?= $row2['TaskID']; ?>';"><?php echo $sdes; ?></div>  
+      <div class="edit-btn"><button onclick="location.href='premedittask.php?id=<?= $row2['TaskID']; ?>';"><i class="fa-solid fa-pen"></i></button></div>
       <div class="del-btn"><button onclick="location.href='deletetask.php?id=<?= $row2['TaskID']; ?>';"><i class="fa fa-trash" aria-hidden="true"></i></button></div>
     </div>
     </div>
@@ -143,35 +171,41 @@ $user_data = check_login($con);
     $stat = $_POST['status'];
     $bool = true;
     ?>
-    
-    <script>
-        var pv = " <?= $pri ?>";
-        var sv = " <?= $stat ?>";
-        alert(pv + sv);
-      </script>
+  
     <?php 
     
-    $qu = "select * from Tasks join Status_table on Tasks.Status=Status_table.Sid join Priority_table on Tasks.Priority=Priority_table.Pid where UserID = '$id' and Date = '$currentDate' and Priority = '$pri' and Status = '$stat' order by Status, Priority desc";
+    $qu = "select * from tasks where UserID = '$id' and Date = '$currentDate' and Priority = '$pri' and Status = '$stat' order by Status, Priority desc";
     $run_qu = mysqli_query($con, $qu);
     if(mysqli_num_rows($run_qu) > 0){
       foreach($run_qu as $row3){
         $class = 'task-display';
-        if($row3['Pid'] == 1){
+        if($row3['Priority'] == 1){
           $class = 'task-display-green';
         }
-        else if($row3['Pid'] == 2){
+        else if($row3['Priority'] == 2){
           $class = 'task-display-yellow';
         }
-        else if($row3['Pid'] == 3){
+        else if($row3['Priority'] == 3){
           $class = 'task-display-red';
         }
+
+        $sdes = 'pending';
+    if($row3['Status'] == 1){
+      $sdes = 'Pending';
+    }
+    else if($row3['Status'] == 2){
+      $sdes = 'On progress';
+    }
+    else if($row3['Status'] == 3){
+      $sdes = 'Completed';
+    }
       ?>
       <div class="task-display <?php echo $class; ?>" >
     
       <div class="title-div"><?= $row3['Title']; ?></div>
       <div class="nec-btns">
-        <div class="stat-prog"><?= $row3['Sdes']; ?></div>
-        <div class="edit-btn"><button onclick="location.href='edittask.php?id=<?= $row3['TaskID']; ?>';"><i class="fa-solid fa-pen"></i></button></div>
+      <div class="stat" onclick="location.href='peditstat.php?id=<?= $row2['TaskID']; ?>';"><?php echo $sdes; ?></div>
+        <div class="edit-btn"><button onclick="location.href='premedittask.php?id=<?= $row3['TaskID']; ?>';"><i class="fa-solid fa-pen"></i></button></div>
         <div class="del-btn"><button onclick="location.href='deletetask.php?id=<?= $row3['TaskID']; ?>';"><i class="fa fa-trash" aria-hidden="true"></i></button></div>
       </div>
     </div>
@@ -185,27 +219,38 @@ $user_data = check_login($con);
 
   
   if($bool == false){
-  $query2 = "select * from Tasks join Status_table on Tasks.Status=Status_table.Sid join Priority_table on Tasks.Priority=Priority_table.Pid where UserID = '$id' and Date='$currentDate' order by Status, Priority desc";
+  $query2 = "select * from tasks where UserID = '$id' and Date='$currentDate' order by Status, Priority desc";
   $run_query = mysqli_query($con, $query2);
   if(mysqli_num_rows($run_query) > 0){
   foreach($run_query as $row2){
     $class = 'task-display';
-    if($row2['Pid'] == 1){
+    if($row2['Priority'] == 1){
       $class = 'task-display-green';
     }
-    else if($row2['Pid'] == 2){
+    else if($row2['Priority'] == 2){
       $class = 'task-display-yellow';
     }
-    else if($row2['Pid'] == 3){
+    else if($row2['Priority'] == 3){
       $class = 'task-display-red';
+    }
+
+    $sdes = 'pending';
+    if($row2['Status'] == 1){
+      $sdes = 'Pending';
+    }
+    else if($row2['Status'] == 2){
+      $sdes = 'On progress';
+    }
+    else if($row2['Status'] == 3){
+      $sdes = 'Completed';
     }
   ?>
   <div class="task-display <?php echo $class; ?>" >
       
     <div class="title-div"><?= $row2['Title']; ?></div>
     <div class="nec-btns">
-      <div class="stat-prog"><?= $row2['Sdes']; ?></div>
-      <div class="edit-btn"><button onclick="location.href='edittask.php?id=<?= $row2['TaskID']; ?>';"><i class="fa-solid fa-pen"></i></button></div>
+      <div class="stat" onclick="location.href='peditstat.php?id=<?= $row2['TaskID']; ?>';"><?php echo $sdes; ?></div>
+      <div class="edit-btn"><button onclick="location.href='premedittask.php?id=<?= $row2['TaskID']; ?>';"><i class="fa-solid fa-pen"></i></button></div>
       <div class="del-btn"><button onclick="location.href='deletetask.php?id=<?= $row2['TaskID']; ?>';"><i class="fa fa-trash" aria-hidden="true"></i></button></div>
     </div>
   </div>
@@ -223,4 +268,7 @@ $user_data = check_login($con);
 </body>
 </html>
 <script src="scripts/stylemain.js"></script>
+<script src="theme.js"></script>
 <!-- <script src="script.js"></script> -->
+<script src="Notification/script.js"></script>
+

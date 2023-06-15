@@ -29,6 +29,7 @@ body {
     padding: 10px 0;
     align-items: center;
     border: 2px var(--primary-clr) solid;
+    gap: 100px;
 }
 
 .cal {
@@ -41,10 +42,11 @@ body {
     color: white;
     border-radius: 10px;
     background-color: var(--primary-clr);
+    gap: 50px;
 }
 
 .cal .goto-today {
-    width: 70%;
+    width: 20%;
     height: 50px;
     display: flex;
     align-items: center;
@@ -321,7 +323,7 @@ form {
 .sidebar ul li a {
     background-color: var(--primary-clr);
     display: block;
-    padding: 7vh 10%;
+    padding: 5vh 10%;
     font-size: 2em;
     position: relative;
     color: white;
@@ -336,6 +338,7 @@ form {
 .sidebar ul li a:hover:before,
 .sidebar ul li a:active:before {
     display: block;
+    background: #fff;
 }
 
 .mainpart {

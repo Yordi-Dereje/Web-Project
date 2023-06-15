@@ -33,6 +33,6 @@ if($_SERVER['REQUEST_METHOD'] == 'GET'){
         mysqli_query($con, $query);
     }   
 }
-      header("Location: main.php");
+      header("Location: mainpremium.php");
       die;
 ?>

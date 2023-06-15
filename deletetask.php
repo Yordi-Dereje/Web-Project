@@ -13,7 +13,7 @@ if($_SERVER['REQUEST_METHOD'] == 'GET'){
     }
 
     $tid = $_GET["id"];
-    $query = "delete from Tasks where TaskID='$tid'";
+    $query = "delete from tasks where TaskID='$tid'";
     mysqli_query($con, $query);
 }
 

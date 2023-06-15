@@ -49,9 +49,14 @@
   $response = json_decode($response);
 
   if ($response->status == "success") {
+    $prid = $user_data ['id'];
+    $query = "insert into premium_accounts (ID) values ('$prid')";
+    mysqli_query($con, $query);
     header("Location: " . $response->data->checkout_url);
+
+
    } else {
-    header("Location: ../taskmate.php?error=4");
+    header("Location: ../main.php");
    }
 
 ?>
