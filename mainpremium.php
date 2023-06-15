@@ -14,8 +14,7 @@ $user_data = check_login($con);
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
-<link rel="stylesheet" href="styles/mainprem.css?version7" />
-<!-- <link rel="stylesheet" href="styles/color.css?version4" /> -->
+<link rel="stylesheet" href="styles/mainprem.css?version8" />
 <link rel="stylesheet" href="themeChanger.css?version3 "/>
 <title>Home page</title>
 </head>
@@ -28,7 +27,7 @@ $user_data = check_login($con);
 <h4>TaskMate</h4>
 </div>
 <ul>
-<li><a href="mainpremium.php" class="selected_one" onclick="toggle()"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+<li><a href="mainpremium.php" onclick="toggle()"><i class="fa fa-home" aria-hidden="true"></i></a></li>
 <li><a href="premnewtask.php" onclick="toggle()"><i class="fa fa-plus" aria-hidden="true"></i></a></li>
 <li><a href="premmanageacc.php" onclick="toggle()"><i class="fa fa-user" aria-hidden="true"></i></a></li>
 <li><a href="front.html" onclick="toggle()"><i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
@@ -269,6 +268,3 @@ $user_data = check_login($con);
 </html>
 <script src="scripts/stylemain.js"></script>
 <script src="theme.js"></script>
-<!-- <script src="script.js"></script> -->
-<script src="Notification/script.js"></script>
-

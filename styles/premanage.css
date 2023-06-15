@@ -2,7 +2,7 @@
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
-    
+
 }
 
 
@@ -53,7 +53,7 @@ body {
     padding: 30px;
     height: 100%;
     animation: slideInleft 2.5s ease-in 0s 1 normal none;
-    border: 2px solid var( --clr-body-bg);
+    border: 2px solid var(--clr-body-bg);
     border-bottom-right-radius: 15px;
     border-top-right-radius: 15px;
 }
@@ -67,7 +67,7 @@ body {
     position: relative;
     width: 100%;
     height: 50px;
-    border-bottom: 2px solid var( --clr-body-bg);
+    border-bottom: 2px solid var(--clr-body-bg);
     margin: 20px 0;
 }
 
@@ -76,7 +76,7 @@ body {
     top: 50%;
     left: 0px;
     font-size: 1em;
-    color: var( --clr-body-bg);
+    color: var(--clr-body-bg);
     font-weight: 500;
     pointer-events: none;
     transition: .5s;
@@ -102,7 +102,7 @@ body {
     width: 100%;
     height: 45px;
     color: #fff;
-    background-color: var( --clr-body-bg);
+    background-color: var(--clr-body-bg);
     border: none;
     outline: none;
     border-radius: 6px;
@@ -116,11 +116,11 @@ select {
     background-color: transparent;
     font-size: 120%;
     width: 100%;
-    border-bottom: 2px var( --clr-body-bg) solid;
+    border-bottom: 2px var(--clr-body-bg) solid;
 }
 
 .sidebar {
-    background-color: var( --clr-body-bg);
+    background-color: var(--clr-body-bg);
     position: fixed;
     top: 0;
     left: 0;
@@ -133,14 +133,14 @@ select {
 }
 
 .profile {
-    background-color: var( --clr-body-bg);
+    background-color: var(--clr-body-bg);
     margin-bottom: 40px;
     text-align: center;
 }
 
 .whole {
     display: flex;
-    color: var( --clr-body-bg);
+    color: var(--clr-body-bg);
     min-height: 90vh;
 }
 
@@ -155,7 +155,7 @@ select {
 }
 
 .sidebar ul li a {
-    background-color: var( --clr-body-bg);
+    background-color: var(--clr-body-bg);
     display: block;
     padding: 5vh 10%;
     font-size: 2em;
@@ -165,8 +165,8 @@ select {
 
 .sidebar ul li a:hover,
 .sidebar ul li a:active {
-    color: var( --clr-body-bg);
-    background:  var( --clr-bg);
+    color: var(--clr-body-bg);
+    background: var(--clr-bg);
 }
 
 .sidebar ul li a:hover:before,
@@ -182,7 +182,7 @@ select {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var( --clr-body-bg);
+    background-color: var(--clr-body-bg);
     width: 50%;
     height: 100%;
     border-bottom-left-radius: 15px;
@@ -200,11 +200,11 @@ select {
 }
 
 h4 {
-    color: var( --clr-body-bg);
+    color: var(--clr-body-bg);
     position: absolute;
-    top: 20px;
+    top: 30px;
     right: 20px;
-    border: 2px solid var( --clr-body-bg);
+    border: 2px solid var(--clr-body-bg);
     padding: 10px;
     font-size: 1.1em;
     border-radius: 15px;
@@ -230,8 +230,9 @@ h4 {
         padding: 0 10px;
         height: 100%;
         animation: slideInleft 2.5s ease-in 0s 1 normal none;
-        border: 2px solid var( --clr-body-bg);
+        border: 2px solid var(--clr-body-bg);
         border-radius: 15px;
+        z-index: -1;
     }
 
     .wrapper {
@@ -253,14 +254,15 @@ h4 {
         width: 95vw;
         padding: 10px 20px;
         position: relative;
+        z-index: -1;
     }
 
     h4 {
-        color: var( --clr-body-bg);
+        color: var(--clr-body-bg);
         position: absolute;
-        top: 20px;
+        top: 80px;
         right: 20px;
-        border: 2px solid var( --clr-body-bg);
+        border: 2px solid var(--clr-body-bg);
         padding: 10px;
         font-size: 1.1em;
         border-radius: 15px;
@@ -299,7 +301,7 @@ h4 {
         width: 100%;
         height: 2px;
         background: white;
-        z-index: -1;
+        z-index: 1;
         box-shadow: 0 10px 0 white;
         transition: 0.5s;
     }
@@ -349,13 +351,13 @@ h4 {
     }
 
     .sidebar ul li a {
-        color: var( --clr-body-bg);
+        color: var(--clr-body-bg);
         padding: 4vh 45%;
         background-color: white;
         position: relative;
         margin: 0;
         text-decoration: none;
-        color: var( --clr-body-bg);
+        color: var(--clr-body-bg);
         letter-spacing: 2px;
         font-weight: 300;
         transition: 0.6s;
@@ -365,13 +367,13 @@ h4 {
     .sidebar ul li a:hover,
     .sidebar ul li a:active {
         color: white;
-        background: var( --clr-body-bg);
+        background: var(--clr-body-bg);
     }
 
     .sidebar ul li a:hover:before,
     .sidebar ul li a:active:before {
         display: block;
-        background:  var( --clr-bg);
+        background: var(--clr-bg);
     }
 
 }

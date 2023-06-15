@@ -15,9 +15,11 @@ body {
     align-items: center;
 }
 
-.toppart{
+.toppart {
     display: flex;
+    justify-content: center;
 }
+
 
 .container {
     position: relative;
@@ -29,10 +31,10 @@ body {
     display: flex;
     flex-direction: column;
     border-radius: 10px;
-    background-color: var( --clr-body-bg);
+    background-color: var(--clr-body-bg);
     padding: 10px 0;
     align-items: center;
-    border: 2px var( --clr-body-bg) solid;
+    border: 2px var(--clr-body-bg) solid;
 }
 
 .cal {
@@ -44,7 +46,7 @@ body {
     align-items: center;
     color: white;
     border-radius: 10px;
-    background-color: var( --clr-body-bg);
+    background-color: var(--clr-body-bg);
 }
 
 .cal .goto-today {
@@ -59,7 +61,7 @@ body {
 }
 
 .filters {
-    background-color: var( --clr-body-bg);
+    background-color: var(--clr-body-bg);
     border-radius: 10px;
     display: flex;
     flex-direction: row;
@@ -83,7 +85,7 @@ body {
 }
 
 .filter-btn:hover {
-    color: var( --clr-body-bg);
+    color: var(--clr-body-bg);
     background-color: white;
 }
 
@@ -114,7 +116,7 @@ select {
     border: none;
     border-radius: 5px;
     padding: 0 10px;
-    color: var( --clr-body-bg);
+    color: var(--clr-body-bg);
     border-radius: 5px;
 }
 
@@ -124,18 +126,18 @@ select {
     border-radius: 5px;
     background-color: transparent;
     cursor: pointer;
-    color: var( --clr-body-bg);
+    color: var(--clr-body-bg);
     color: white;
 }
 
 .cal .goto-today button:hover {
-    color: var( --clr-body-bg);
+    color: var(--clr-body-bg);
     background-color: white;
 }
 
 .cal .goto-today .goto button {
     border: none;
-    border-left: 1px solid var( --clr-body-bg);
+    border-left: 1px solid var(--clr-body-bg);
     border-radius: 0;
 }
 
@@ -152,9 +154,9 @@ select {
 }
 
 .maindisp {
-    border: 2px var( --clr-body-bg) solid;
+    border: 2px var(--clr-body-bg) solid;
     margin-top: 10px;
-    width: 85vw;
+    width: 90vw;
     border-radius: 20px;
     height: 72vh;
     padding: 20px;
@@ -202,15 +204,15 @@ select {
 }
 
 .stat {
-    background-color: var( --clr-body-bg);
+    background-color: var(--clr-body-bg);
     color: white;
     border-radius: 25px;
     padding: 10px 20px;
 }
 
 .stat:hover {
-    background-color: var( --clr-bg);
-    color: var( --clr-body-bg);
+    background-color: var(--clr-bg);
+    color: var(--clr-body-bg);
     border-radius: 25px;
     padding: 10px 20px;
     cursor: pointer;
@@ -264,7 +266,7 @@ form {
 .prem_button button {
     outline: none;
     border: solid 1px white;
-    background-color: var( --clr-body-bg);
+    background-color: var(--clr-body-bg);
     color: white;
     padding: 5px 10px;
     border-radius: 8px;
@@ -278,9 +280,9 @@ form {
 }
 
 .prem_button button:hover {
-    border: solid 1px var( --clr-body-bg);
+    border: solid 1px var(--clr-body-bg);
     background-color: white;
-    color: var( --clr-body-bg);
+    color: var(--clr-body-bg);
     cursor: pointer;
 
 }
@@ -320,7 +322,7 @@ form {
 }
 
 .sidebar {
-    background-color: var( --clr-body-bg);
+    background-color: var(--clr-body-bg);
     position: fixed;
     top: 0;
     left: 0;
@@ -332,14 +334,14 @@ form {
 }
 
 .profile {
-    background-color: var( --clr-body-bg);
-    margin-bottom: 40px;
+    background-color: var(--clr-body-bg);
+    margin-bottom: 0px;
     text-align: center;
 }
 
 .whole {
     display: flex;
-    color: var( --clr-body-bg);
+    color: var(--clr-body-bg);
     min-height: 90vh;
 }
 
@@ -354,7 +356,7 @@ form {
 }
 
 .sidebar ul li a {
-    background-color: var( --clr-body-bg);
+    background-color: var(--clr-body-bg);
     display: block;
     padding: 5vh 10%;
     font-size: 2em;
@@ -372,21 +374,21 @@ form {
 }
 
 .sidebar ul li a button:hover {
-    color: var( --clr-body-bg);
-    background:  var( --clr-bg);
+    color: var(--clr-body-bg);
+    background: var(--clr-bg);
 }
 
 
 .sidebar ul li a:hover,
 .sidebar ul li a:active {
-    color: var( --clr-body-bg);
-    background:  var( --clr-bg);
+    color: var(--clr-body-bg);
+    background: var(--clr-bg);
 }
 
 .sidebar ul li a:hover:before,
 .sidebar ul li a:active:before {
     display: block;
-    background:  var( --clr-bg);
+    background: var(--clr-bg);
 }
 
 .mainpart {
@@ -411,6 +413,10 @@ html {
 
 @media(max-width: 800px) {
 
+    .container {
+        height: 30vh;
+    }
+
     .cal,
     .filters {
         display: flex;
@@ -425,13 +431,9 @@ html {
         width: 100%;
     }
 
-    .profile h2 {
-        margin-top: 15px;
-    }
-
     .profile h4 {
         color: white;
-        margin-bottom: 25px;
+        margin-bottom: 5px;
     }
 
     .mainpart {
@@ -445,10 +447,11 @@ html {
         top: 0;
         left: 0;
         width: 100%;
+        height: 13%;
         display: flex;
         justify-content: space-between;
-        align-items: center;
-        padding: 40px 80px;
+        /* align-items: center; */
+        padding: 20px 100px;
         z-index: 1;
         transition: all 0.5s ease;
     }
@@ -475,7 +478,7 @@ html {
         height: 2px;
         background: white;
         z-index: 1;
-        box-shadow: 0 10px 0 var( --clr-body-bg);
+        box-shadow: 0 10px 0 var(--clr-body-bg);
         transition: 0.5s;
     }
 
@@ -492,7 +495,7 @@ html {
 
     .sidebar .profile {
         position: fixed;
-        padding: 5px 55px;
+        padding: 0px 55px;
     }
 
     .profile ul {
@@ -524,13 +527,13 @@ html {
     }
 
     .sidebar ul li a {
-        color: var( --clr-body-bg);
+        color: var(--clr-body-bg);
         padding: 4vh 45%;
         background-color: white;
         position: relative;
         margin: 0;
         text-decoration: none;
-        color: var( --clr-body-bg);
+        color: var(--clr-body-bg);
         letter-spacing: 2px;
         font-weight: 300;
         transition: 0.6s;
@@ -539,13 +542,13 @@ html {
     .sidebar ul li a:hover,
     .sidebar ul li a:active {
         color: white;
-        background: var( --clr-body-bg);
+        background: var(--clr-body-bg);
     }
 
     .sidebar ul li a:hover:before,
     .sidebar ul li a:active:before {
         display: block;
-        background:  var( --clr-bg);
+        background: var(--clr-bg);
     }
 
 }

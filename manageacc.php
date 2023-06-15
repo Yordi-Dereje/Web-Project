@@ -40,7 +40,6 @@ if(!empty($first_name) && !empty($last_name) && !empty($email) && !empty($phone)
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
     <link rel="stylesheet" href="styles/manageacc.css?version9" />
     <link rel="stylesheet" href="styles/color.css?version1" />
-    <link rel="stylesheet" href="themeChanger.css">
     <title>Manage account</title>
 </head>
 <body>  
@@ -112,4 +111,4 @@ if(!empty($first_name) && !empty($last_name) && !empty($email) && !empty($phone)
 </body>
 </html>
 <script src="scripts/stylemain.js"></script>
-<script src="theme.js"></script>
+<!-- <script src="theme.js"></script> -->

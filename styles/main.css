@@ -46,7 +46,7 @@ body {
 }
 
 .cal .goto-today {
-    width: 20%;
+    width: 50%;
     height: 50px;
     display: flex;
     align-items: center;

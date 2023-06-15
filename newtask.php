@@ -18,6 +18,12 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     if(!empty($title) && !empty($description)){
         $query = "insert into tasks (UserID, Title, Description, Category, Date, Status, Priority) values ('$id', '$title', '$description', '$category', '$date', '$status', '$priority')";
         mysqli_query($con, $query);
+        ?>
+          <script>
+            var value = " <?= $query ?>";
+            alert(value);
+          </script>
+        <?php
         header("Location: main.php");
         die;
     }
@@ -39,30 +45,24 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
     <link rel="stylesheet" href="styles/newTask.css?version15" />
     <link rel="stylesheet" href="styles/color.css?version1" />
-    <link rel="stylesheet" href="themeChanger.css">
     <title>My website</title>
 </head>
 <body>
 <div class="sidebar">
-      <div class="profile" id="sticky">
-      <div class="namepart">
-        <h2>TaskMate</h2>
-      </div>
+  <div class="profile" id="sticky">
+    <div class="namepart"><h2>TaskMate</h2></div>
       <ul>
         <li><a href="main.php" onclick="toggle()"><i class="fa fa-home" aria-hidden="true"></i></a></li>
         <li><a href="newtask.php" onclick="toggle()"><i class="fa fa-plus" aria-hidden="true"></i></a></li>
-        <li><a href="manageacc.php" class="selected_one" onclick="toggle()"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+        <li><a href="manageacc.php" onclick="toggle()"><i class="fa fa-user" aria-hidden="true"></i></a></li>
         <li><a href="front.html" onclick="toggle()"><i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
       </ul>
-
-        <div class="toggle" onclick="toggle()"></div>
-    </div>
+      <div class="toggle" onclick="toggle()"></div>
+  </div>
 </div>
 <h4><?php echo $user_data['FirstName'].' '.$user_data['LastName']; ?></h4>
   <div class="wrapper">
-    <div class="sidespace">
-      <label class="sidespace-text">New task</label>
-    </div>
+    <div class="sidespace"><label class="sidespace-text">New task</label></div>
     <div class="form-box">
       <form method="post">
         <div class="input-box">
@@ -98,11 +98,10 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     </select> 
     <br><br>
 	  <button class="btn" type="submit" class="btn">Register</button> 
-  </div> 
-  </div>
   </form>
+</div>
 </div>
   </body>
 </html>
 <script src="scripts/stylemain.js"></script>
-<script src="theme.js"></script>
+<!-- <script src="theme.js"></script> -->
