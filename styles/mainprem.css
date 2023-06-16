@@ -156,7 +156,7 @@ select {
 .maindisp {
     border: 2px var(--clr-body-bg) solid;
     margin-top: 10px;
-    width: 90vw;
+    width: 85vw;
     border-radius: 20px;
     height: 72vh;
     padding: 20px;
@@ -298,6 +298,10 @@ form {
         padding: 15px;
     }
 
+    .maindisp{
+      width: 90vw;
+    }
+
     .cal {
         height: 15vh;
         width: 100%;
@@ -343,11 +347,6 @@ form {
     display: flex;
     color: var(--clr-body-bg);
     min-height: 90vh;
-}
-
-.sidebar h2 {
-    color: white;
-    margin-top: 50px;
 }
 
 .sidebar h4 {
@@ -427,8 +426,23 @@ html {
         width: 100%;
     }
 
-    .goto {
+    .sidebar h4 {
+        color: white;
+        margin: 0px 0;
+    }
+    .cal .goto-today{
         width: 100%;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        padding: 15px 20px;
+        color: white;
+
+    }
+
+    .goto {
+        width: 60vw;
     }
 
     .profile h4 {
@@ -447,7 +461,7 @@ html {
         top: 0;
         left: 0;
         width: 100%;
-        height: 13%;
+        height: 10%;
         display: flex;
         justify-content: space-between;
         /* align-items: center; */
@@ -495,7 +509,7 @@ html {
 
     .sidebar .profile {
         position: fixed;
-        padding: 0px 55px;
+        padding: 30px 55px;
     }
 
     .profile ul {
