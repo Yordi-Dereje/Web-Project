@@ -14,7 +14,7 @@ $user_data = check_login($con);
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
-<link rel="stylesheet" href="styles/mainprem.css?version10" />
+<link rel="stylesheet" href="styles/mainprem.css?version12" />
 <link rel="stylesheet" href="themeChanger.css?version3 "/>
 <title>Home page</title>
 </head>
@@ -29,6 +29,7 @@ $user_data = check_login($con);
 <ul>
 <li><a href="mainpremium.php" onclick="toggle()"><i class="fa fa-home" aria-hidden="true"></i></a></li>
 <li><a href="premnewtask.php" onclick="toggle()"><i class="fa fa-plus" aria-hidden="true"></i></a></li>
+<li><a href="reports.php" onclick="toggle()"><i class="fa fa-file-text" aria-hidden="true"></i></a></li>
 <li><a href="premmanageacc.php" onclick="toggle()"><i class="fa fa-user" aria-hidden="true"></i></a></li>
 <li><a href="front.html" onclick="toggle()"><i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
 </ul>
@@ -73,8 +74,8 @@ $user_data = check_login($con);
   <button class="goto-btn" name="goto-btn" type="submit">Go</button>
   </div>
 </form>
-
 </div> 
+
 <div class="today-date">
 <div class="event-date"><?php echo date('l M, d Y'); ?></div>
 </div>
@@ -118,7 +119,11 @@ $user_data = check_login($con);
     $t2 = date('l M, d Y',$t1);
     $bool = true;
     ?>
-      
+      <script>
+            var value = " <?= $t2 ?>";
+            const eventdate = document.querySelector(".event-date");
+            eventdate.innerHTML = value; 
+          </script>
     <?php $query = "select * from tasks where UserID = '$id' and Date = '$ndate' order by Status, Priority desc";
     $run_query = mysqli_query($con, $query);
     if(mysqli_num_rows($run_query) > 0){
@@ -154,7 +159,7 @@ $user_data = check_login($con);
       <div class="nec-btns">
       <div class="stat" onclick="location.href='peditstat.php?id=<?= $row2['TaskID']; ?>';"><?php echo $sdes; ?></div>  
       <div class="edit-btn"><button onclick="location.href='premedittask.php?id=<?= $row2['TaskID']; ?>';"><i class="fa-solid fa-pen"></i></button></div>
-      <div class="del-btn"><button onclick="location.href='deletetask.php?id=<?= $row2['TaskID']; ?>';"><i class="fa fa-trash" aria-hidden="true"></i></button></div>
+      <div class="del-btn"><button onclick="location.href='premdel.php?id=<?= $row2['TaskID']; ?>';"><i class="fa fa-trash" aria-hidden="true"></i></button></div>
     </div>
     </div>
     <?php
@@ -205,7 +210,7 @@ $user_data = check_login($con);
       <div class="nec-btns">
       <div class="stat" onclick="location.href='peditstat.php?id=<?= $row2['TaskID']; ?>';"><?php echo $sdes; ?></div>
         <div class="edit-btn"><button onclick="location.href='premedittask.php?id=<?= $row3['TaskID']; ?>';"><i class="fa-solid fa-pen"></i></button></div>
-        <div class="del-btn"><button onclick="location.href='deletetask.php?id=<?= $row3['TaskID']; ?>';"><i class="fa fa-trash" aria-hidden="true"></i></button></div>
+        <div class="del-btn"><button onclick="location.href='premdel.php?id=<?= $row3['TaskID']; ?>';"><i class="fa fa-trash" aria-hidden="true"></i></button></div>
       </div>
     </div>
     <?php
@@ -250,14 +255,14 @@ $user_data = check_login($con);
     <div class="nec-btns">
       <div class="stat" onclick="location.href='peditstat.php?id=<?= $row2['TaskID']; ?>';"><?php echo $sdes; ?></div>
       <div class="edit-btn"><button onclick="location.href='premedittask.php?id=<?= $row2['TaskID']; ?>';"><i class="fa-solid fa-pen"></i></button></div>
-      <div class="del-btn"><button onclick="location.href='deletetask.php?id=<?= $row2['TaskID']; ?>';"><i class="fa fa-trash" aria-hidden="true"></i></button></div>
+      <div class="del-btn"><button onclick="location.href='premdel.php?id=<?= $row2['TaskID']; ?>';"><i class="fa fa-trash" aria-hidden="true"></i></button></div>
     </div>
   </div>
   <?php
   }
   }
   else{
-  echo "No tasks pending...";
+    echo "No tasks pending...";
   }
   }
   ?>

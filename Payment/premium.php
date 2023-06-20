@@ -6,8 +6,6 @@
 
   $user_data = check_login($con);
 
-  // $ref_id
-  
 
   $post_field = json_encode(
       [

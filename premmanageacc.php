@@ -51,6 +51,7 @@ if(!empty($first_name) && !empty($last_name) && !empty($email) && !empty($phone)
       <ul>
         <li><a href="mainpremium.php" class="selected_one" onclick="toggle()"><i class="fa fa-home" aria-hidden="true"></i></a></li>
         <li><a href="premnewtask.php" onclick="toggle()"><i class="fa fa-plus" aria-hidden="true"></i></a></li>
+        <li><a href="reports.php" onclick="toggle()"><i class="fa fa-file-text" aria-hidden="true"></i></a></li>
         <li><a href="premmanageacc.php" onclick="toggle()"><i class="fa fa-user" aria-hidden="true"></i></a></li>
         <li><a href="front.html" onclick="toggle()"><i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
       </ul>
@@ -69,6 +70,7 @@ if(!empty($first_name) && !empty($last_name) && !empty($email) && !empty($phone)
 <input type="text" required name="first_name" value="<?php echo $user_data['FirstName']; ?>">
         <label for="firstName">First Name</label>
       </div>
+      
       <div class="input-box">
         <input  type="text" required name="last_name" value="<?php echo $user_data['LastName']; ?>">
         <label for="lastName">Last Name</label>
